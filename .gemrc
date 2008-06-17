@@ -1,0 +1,9 @@
+--- 
+:backtrace: false
+:update_sources: true
+:sources: 
+- http://gems.rubyforge.org
+- http://gems.datamapper.org
+:verbose: true
+:bulk_threshold: 1000
+:benchmark: false

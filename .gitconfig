@@ -1,0 +1,19 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	pager = cat
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	di = diff
+	st = status
+	ci = commit
+[user]
+	name = Joe Grossberg
+	email = joegrossberg@gmail.com
+[apply]
+	whitespace = nowarn
