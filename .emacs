@@ -1,3 +1,5 @@
+(defvar *emacs-load-start* (car (last (current-time))))
+
 (setq additional-paths '("/Users/josephgrossberg/" "/Users/josephgrossberg/lisp"))
 (setq load-path (append additional-paths load-path))
 
@@ -178,3 +180,5 @@
 ; find-grep-dired
 ; find-name-dired
 ; grep-find
+
+(message "My .emacs loaded in %s seconds" (/ (- (car (last (current-time))) *emacs-load-start*) 100000.0))
