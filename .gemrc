@@ -1,9 +1,10 @@
 --- 
-:backtrace: false
-:update_sources: true
 :sources: 
 - http://gems.rubyforge.org
 - http://gems.datamapper.org
-:verbose: true
+#- http://gems.github.com
 :bulk_threshold: 1000
+:verbose: true
+:update_sources: true
 :benchmark: false
+:backtrace: false
