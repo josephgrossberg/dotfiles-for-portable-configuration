@@ -1,10 +1,12 @@
 --- 
 :sources: 
 - http://gems.rubyforge.org
-- http://gems.datamapper.org
-#- http://gems.github.com
+- http://gems.engineyard.com
+#- http://gems.datamapper.org
+- http://gems.github.com
 :bulk_threshold: 1000
 :verbose: true
 :update_sources: true
 :benchmark: false
 :backtrace: false
+gem: --no-rdoc --no-ri
