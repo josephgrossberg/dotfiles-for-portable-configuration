@@ -25,6 +25,7 @@
 	di = diff
 	st = status
 	ci = commit
+	co = checkout
 [user]
 	name = Joe Grossberg
 	email = joegrossberg@gmail.com
