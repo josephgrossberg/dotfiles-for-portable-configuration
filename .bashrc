@@ -10,6 +10,7 @@ source /sw/bin/init.sh
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
 export PATH=/opt/local/bin:$PATH
 export PATH=~/bin:$PATH
+export PATH=~/depot_tools:$PATH
 
 ###################################
 
@@ -26,6 +27,10 @@ export MANPATH=$MANPATH:/usr/X11R6/man
 export GEMHOME=/usr/local/lib/ruby/gems/1.8/gems
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
+
+###################################
+
+export SPRING=mti
 
 ###################################
 
@@ -46,7 +51,9 @@ while(<>){
 }
 "; date'
 alias ducks='du -cks * |sort -rn |head -11'
+alias eamcs='emacs'
 alias fn='find . -name'
+alias joegrossberg='ssh joegross@joegrossberg.com'
 alias ls='ls -bG'
 alias la='ls -abG'
 alias ll='ls -abGl'
@@ -83,4 +90,8 @@ sadd () {
 
 ###################################
 
-alias rakeall='rake db:migrate; rake db:test:clone_structure; rake spec:models; rake spec:controllers'
+alias am='cd ~/amundo/'
+alias pl='cd ~/presently'
+alias rlc='rake log:clear'
+alias sc='./script/console'
+alias ss='./script/server'
