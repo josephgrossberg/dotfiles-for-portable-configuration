@@ -61,13 +61,13 @@ remote="${YELLOW}↕"
   fi
 if [[ ${git_status} =~ ${branch_pattern} ]]; then
 branch=${BASH_REMATCH[1]}
-    echo " (${branch})${remote}${state}"
+    echo "(${branch})${remote}${state}"
   fi
 }
  
 function prompt_func() {
     previous_return_value=$?;
-    prompt="${TITLEBAR}.:[ \w${BLUE}$(parse_git_branch)${COLOR_NONE} ]:. "
+    prompt="${TITLEBAR}.:[ \w ]:. ${BLUE}$(parse_git_branch)${COLOR_NONE}"
     PS1="${prompt}\n${COLOR_NONE}$ "
 }
  
