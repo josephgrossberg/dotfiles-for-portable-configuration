@@ -9,6 +9,8 @@ IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_PATH] = File::expand_path("~/.irb.history")
 
 alias :x :exit
+alias :q :exit
+alias :quit :exit
 
 def ri arg
   puts `ri #{arg}`
