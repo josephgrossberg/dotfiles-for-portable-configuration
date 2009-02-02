@@ -57,9 +57,3 @@ begin
 rescue LoadError
   puts "Error loading module what_methods"
 end
-
-begin
-  require 'facets'
-rescue LoadError
-  puts "Error loading module facets"
-end
