@@ -46,7 +46,7 @@ function parse_git_branch {
   if [[ ! ${git_status}} =~ "working directory clean" ]]; then
 state="${RED}⚡"
   fi
-  if [[ ! ${git_status}} =~ "Changed but not updated" ]]; then
+  if [[ ${git_status}} =~ "Changed but not updated" ]]; then
 needs_push="${GREEN}·"
   fi
   # add an else if or two here if you want to get more specific
