@@ -40,13 +40,14 @@ export GREP_COLOR='1;33'
 function parse_git_branch {
   git rev-parse --git-dir &> /dev/null
   git_status="$(git status 2> /dev/null)"
+  git_log_oneline="$(git log --pretty=oneline origin/master..master 2> /dev/null | wc -l)"
   branch_pattern="^# On branch ([^${IFS}]*)"
   remote_pattern="# Your branch is (.*) of"
   diverge_pattern="# Your branch and (.*) have diverged"
   if [[ ! ${git_status}} =~ "working directory clean" ]]; then
 state="${RED}⚡"
   fi
-  if [[ ${git_status}} =~ "Changed but not updated" ]]; then
+  if [[ ! ${git_log_oneline}} =~ "       0" ]]; then
 needs_push="${GREEN}·"
   fi
   # add an else if or two here if you want to get more specific
