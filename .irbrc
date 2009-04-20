@@ -20,10 +20,14 @@ def cheat arg
   puts `cheat #{arg}`
 end
 
-# Log to STDOUT if in Rails
-if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
-  require 'logger'
-  RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
+if ENV['RAILS_ENV']
+  def sql(query_string)
+    ActiveRecord::Base.connection.select_all(query_string)
+  end
+  unless Object.const_defined?('RAILS_DEFAULT_LOGGER')
+    require 'logger'
+    RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
+  end
 end
 
 class Object
