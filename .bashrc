@@ -45,10 +45,10 @@ function parse_git_branch {
   remote_pattern="# Your branch is (.*) of"
   diverge_pattern="# Your branch and (.*) have diverged"
   if [[ ! ${git_status}} =~ "working directory clean" ]]; then
-state="${RED}⚡"
+state="${RED}C"
   fi
   if [[ ! ${git_log_oneline}} =~ "       0" ]]; then
-needs_push="${GREEN}·"
+needs_push="${GREEN}P"
   fi
   # add an else if or two here if you want to get more specific
   if [[ ${git_status} =~ ${remote_pattern} ]]; then
@@ -63,7 +63,7 @@ remote="${YELLOW}↕"
 fi
 if [[ ${git_status} =~ ${branch_pattern} ]]; then
 branch=${BASH_REMATCH[1]}
-    echo "(${branch})${remote}${state}${needs_push}"
+    echo "(${branch}) ${remote}${state}${needs_push}"
   fi
 }
  
@@ -99,7 +99,7 @@ alias brookes='cd ~/brookes/'
 alias comcast='cd ~/comcast/'
 alias ea='cd ~/earthaid/'
 alias ez='cd ~/ez/equipped/'
-alias hm='cd ~/streamsage/'
+alias hm='cd ~/brookes/'
 alias intridea='cd ~/intridea/newsite'
 alias iu='cd ~/intridea_university/ruby-on-rails'
 alias mlt='cd ~/mlt/'
@@ -108,5 +108,6 @@ alias pl='cd ~/presently'
 alias rlc='rake log:clear'
 alias sc='./script/console'
 alias ss='./script/server'
+alias streamsage='cd ~/streamsage/'
 
 ###################################
