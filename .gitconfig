@@ -31,3 +31,5 @@
 	email = joegrossberg@gmail.com
 [apply]
 	whitespace = nowarn
+[push]
+	default = matching

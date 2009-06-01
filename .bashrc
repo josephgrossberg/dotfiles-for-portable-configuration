@@ -12,6 +12,7 @@ fi
 source /sw/bin/init.sh
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
 export PATH=/opt/local/bin:$PATH
+#export PATH=/opt/jruby/bin:$PATH
 export PATH=~/bin:$PATH
 
 ###################################
@@ -84,6 +85,7 @@ alias ducks='du -cks * |sort -rn |head -11'
 alias eamcs='emacs'
 alias fn='find . -name'
 alias gem='sudo gem'
+alias guid='mysql -u root -e"select uuid();"'
 alias joegrossberg='ssh joegross@joegrossberg.com'
 alias ls='ls -bG'
 alias la='ls -abG'
@@ -99,7 +101,7 @@ alias brookes='cd ~/brookes/'
 alias comcast='cd ~/comcast/'
 alias ea='cd ~/earthaid/'
 alias ez='cd ~/ez/equipped/'
-alias hm='cd ~/brookes/'
+alias hm='cd ~/streamsage/'
 alias intridea='cd ~/intridea/newsite'
 alias iu='cd ~/intridea_university/ruby-on-rails'
 alias mlt='cd ~/mlt/'
