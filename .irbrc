@@ -45,6 +45,14 @@ class Object
     puts "Ancestors", "-"*9, a_list.inspect, '' unless a_list.empty?
   end
 end
+
+def copy(str)
+  IO.popen(‘pbcopy’, ‘w’) { |f| f << str.to_s }
+end
+
+def paste
+  `pbpaste`
+end
   
 # Inline colorized ri (override wirble's)
 begin
