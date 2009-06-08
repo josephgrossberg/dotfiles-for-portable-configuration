@@ -90,6 +90,7 @@ alias joegrossberg='ssh joegross@joegrossberg.com'
 alias ls='ls -bG'
 alias la='ls -abG'
 alias ll='ls -abGl'
+alias lynx='/Applications/Lynxlet.app/Contents/Resources/lynx/bin/lynx'
 alias now='ruby -e "puts Time.now.utc.to_i"'
 alias rr='railroad -M | dot -Tsvg > doc/database/models.svg; railroad -M | neato -Tpng > doc/database/models.png'
 
@@ -113,3 +114,14 @@ alias ss='./script/server'
 alias streamsage='cd ~/streamsage/'
 
 ###################################
+
+# &> to redirect STDOUT and STDERR
+# 2>&1 to redirect STDERR to STDOUT
+# { pwd; ls } > /foo/bar to group output together
+# foo.sh | tee out.txt to show and store output
+# foo.sh | tee out.txt to show and store output and error
+# ls -l $(cat listing.txt) to run one command as the arg of another
+# ./myscript 3>&1 1>&2 2>&3 to swamp STDOUT and STDERR
+# ./myscript 3>&1 1>out.log 2>&3- | tee -a err.log to store output but pipe err
+# set +o/-o noclobber disables overwriting by redirected output
+# user >| to ignore a noclobber bit
