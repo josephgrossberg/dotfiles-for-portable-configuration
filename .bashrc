@@ -27,6 +27,7 @@ export MANPATH=$MANPATH:/usr/X11R6/man
 export GEMHOME=/usr/local/lib/ruby/gems/1.8/gems
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
+export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET'
 
 ###################################
 # PROMPT
@@ -79,6 +80,7 @@ PROMPT_COMMAND=prompt_func
 ###################################
 # ALIASES
 ###################################
+alias ang='ruby /Users/josephgrossberg/Library/Preferences/Angband/save/backup.rb"
 alias bc='bc -l'
 alias cpan='perl -MCPAN -e shell'
 alias ducks='du -cks * |sort -rn |head -11'
@@ -102,7 +104,7 @@ alias brookes='cd ~/brookes/'
 alias comcast='cd ~/comcast/'
 alias ea='cd ~/earthaid/'
 alias ez='cd ~/ez/equipped/'
-alias hm='cd ~/streamsage/'
+alias hm='cd ~/settopsearch/'
 alias intridea='cd ~/intridea/newsite'
 alias iu='cd ~/intridea_university/ruby-on-rails'
 alias mlt='cd ~/mlt/'
@@ -125,3 +127,6 @@ alias streamsage='cd ~/streamsage/'
 # ./myscript 3>&1 1>out.log 2>&3- | tee -a err.log to store output but pipe err
 # set +o/-o noclobber disables overwriting by redirected output
 # user >| to ignore a noclobber bit
+# ls -l $(cat listing.txt) to run one command as the arg of another
+# !$ prev command
+# !:1 prev (first) argument
