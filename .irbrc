@@ -47,7 +47,7 @@ class Object
 end
 
 def copy(str)
-  IO.popen(‘pbcopy’, ‘w’) { |f| f << str.to_s }
+  IO.popen('pbcopy', 'w') { |f| f << str.to_s }
 end
 
 def paste
@@ -68,4 +68,11 @@ begin
   require 'what_methods'
 rescue LoadError
   puts "Error loading module what_methods"
+end
+
+begin
+  require 'hirb'
+#  Hirb.enable :pager=>false
+rescue LoadError
+  puts "Error loading module hirb"
 end
