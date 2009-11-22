@@ -80,7 +80,8 @@ PROMPT_COMMAND=prompt_func
 ###################################
 # ALIASES
 ###################################
-alias ang='ruby /Users/josephgrossberg/Library/Preferences/Angband/save/backup.rb'
+alias ang_backup='ruby /Users/josephgrossberg/Library/Preferences/Angband/save/backup.rb'
+alias ang_restore='cd ~/Library/Preferences/Angband/save/ && cp $(ls | tail -n3 | head -1) Went'
 alias bc='bc -l'
 alias cpan='perl -MCPAN -e shell'
 alias ducks='du -cks * |sort -rn |head -11'
