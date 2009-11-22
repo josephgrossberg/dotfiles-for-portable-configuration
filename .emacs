@@ -96,6 +96,7 @@
 ;; ruby
 (autoload 'ruby-mode "ruby-mode" t)
 (setq auto-mode-alist (cons '("\\.rb$" . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("Rakefile" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rake$" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.irbrc$" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rhtml$" . html-mode) auto-mode-alist))
@@ -103,6 +104,8 @@
 (setq auto-mode-alist (cons '("\\.sass$" . sass-mode) auto-mode-alist))
 (autoload 'haml-mode "haml-mode" t)
 (setq auto-mode-alist (cons '("\\.haml$" . haml-mode) auto-mode-alist))
+
+(setq auto-mode-alist (cons '("\\.xsd$" . xml-mode) auto-mode-alist))
 
 ;; php
 ;(autoload 'php-mode "php-mode" t)
