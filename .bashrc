@@ -105,6 +105,7 @@ alias brookes='cd ~/brookes/'
 alias comcast='cd ~/comcast/'
 alias ea='cd ~/earthaid/'
 alias ez='cd ~/ez/equipped/'
+alias gs='cd ~/gs/gamestreamer'
 alias hm='cd ~/settopsearch/'
 alias intridea='cd ~/intridea/newsite'
 alias iu='cd ~/intridea_university/ruby-on-rails'
@@ -131,3 +132,4 @@ alias streamsage='cd ~/streamsage/'
 # ls -l $(cat listing.txt) to run one command as the arg of another
 # !$ prev command
 # !:1 prev (first) argument
+# all apps using internet connection: lsof -P -i -n | cut -f 1 -d " " | uniq
