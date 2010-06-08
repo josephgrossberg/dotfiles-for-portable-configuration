@@ -14,6 +14,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
 export PATH=/opt/local/bin:$PATH
 #export PATH=/opt/jruby/bin:$PATH
 export PATH=~/bin:$PATH
+export PATH=/android-sdk-mac_86/tools:$PATH
+export PATH=/usr/bin:$PATH
 
 ###################################
 # SETTINGS
@@ -24,10 +26,10 @@ export PAGER=cat
 export HISTSIZE=20000
 export HISTFILESIZE=20000
 export MANPATH=$MANPATH:/usr/X11R6/man
-export GEMHOME=/usr/local/lib/ruby/gems/1.8/gems
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET'
+export ANDROID_SDK="/android-sdk-mac_86/"
 
 ###################################
 # PROMPT
@@ -100,22 +102,14 @@ alias rr='railroad -M | dot -Tsvg > doc/database/models.svg; railroad -M | neato
 ###################################
 # WORK ALIASES
 ###################################
-alias am='cd ~/amundo/'
-alias brookes='cd ~/brookes/'
-alias comcast='cd ~/comcast/'
-alias ea='cd ~/earthaid/'
-alias ez='cd ~/ez/equipped/'
-alias gs='cd ~/gs/gamestreamer'
-alias hm='cd ~/settopsearch/'
+alias hm='cd ~/brookes/'
 alias intridea='cd ~/intridea/newsite'
 alias iu='cd ~/intridea_university/ruby-on-rails'
-alias mlt='cd ~/mlt/'
-alias mti='cd ~/mti/'
+alias log='cd /var/log/apache2'
 alias pl='cd ~/presently'
 alias rlc='rake log:clear'
 alias sc='./script/console'
 alias ss='./script/server'
-alias streamsage='cd ~/streamsage/'
 
 ###################################
 

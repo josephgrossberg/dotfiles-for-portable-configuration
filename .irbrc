@@ -1,7 +1,8 @@
 ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 
+require 'rubygems'
+#require 'utility_belt'
 require 'irb/completion'
-
 require 'irb/ext/save-history'
 
 IRB.conf[:USE_READLINE] = true

@@ -108,8 +108,8 @@
 (setq auto-mode-alist (cons '("\\.xsd$" . xml-mode) auto-mode-alist))
 
 ;; php
-;(autoload 'php-mode "php-mode" t)
-;(setq auto-mode-alist (cons '("\\.php$" . php-mode) auto-mode-alist))
+(autoload 'php-mode "php-mode" t)
+(setq auto-mode-alist (cons '("\\.php$" . php-mode) auto-mode-alist))
 
 ;(defun php-mode-hook ()
 ;  (setq tab-width 4
