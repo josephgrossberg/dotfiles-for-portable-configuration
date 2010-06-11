@@ -49,7 +49,7 @@ function parse_git_branch {
   remote_pattern="# Your branch is (.*) of"
   diverge_pattern="# Your branch and (.*) have diverged"
   if [[ ! ${git_status}} =~ "working directory clean" ]]; then
-state="${RED}C"
+state="${RED}❖"
   fi
   if [[ ! ${git_log_oneline}} =~ "       0" ]]; then
 needs_push="${GREEN}P"
@@ -73,7 +73,7 @@ branch=${BASH_REMATCH[1]}
  
 function prompt_func() {
     previous_return_value=$?;
-    prompt="${TITLEBAR}.:[ \w ]:. ${BLUE}$(parse_git_branch)${COLOR_NONE}"
+    prompt=".:[ \w ]:. ${BLUE}$(parse_git_branch)${COLOR_NONE}"
     PS1="${prompt}\n${COLOR_NONE}$ "
 }
  
