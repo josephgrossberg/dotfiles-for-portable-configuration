@@ -67,7 +67,7 @@ remote="${YELLOW}↕"
 fi
 if [[ ${git_status} =~ ${branch_pattern} ]]; then
 branch=${BASH_REMATCH[1]}
-    echo "(${branch}) ${remote}${state}${needs_push}"
+    echo "(${branch}) ${remote} ${state} ${needs_push}"
   fi
 }
  
