@@ -11,11 +11,13 @@ fi
 ###################################
 source /sw/bin/init.sh
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
-export PATH=/opt/local/bin:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 #export PATH=/opt/jruby/bin:$PATH
 export PATH=~/bin:$PATH
 export PATH=/android-sdk-mac_86/tools:$PATH
 export PATH=/usr/bin:$PATH
+export PATH=/usr/local/pgsql/bin:$PATH
+export PATH=/usr/local/git/bin:$PATH
 
 ###################################
 # SETTINGS
@@ -30,6 +32,7 @@ export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET'
 export ANDROID_SDK="/android-sdk-mac_86/"
+export PDGDATA='/usr/local/pgsql/data'
 
 ###################################
 # PROMPT
@@ -102,14 +105,14 @@ alias rr='railroad -M | dot -Tsvg > doc/database/models.svg; railroad -M | neato
 ###################################
 # WORK ALIASES
 ###################################
-alias hm='cd ~/brookes/'
+alias hm='cd ~/cer_portal/'
 alias intridea='cd ~/intridea/newsite'
 alias iu='cd ~/intridea_university/ruby-on-rails'
 alias log='cd /var/log/apache2'
 alias pl='cd ~/presently'
 alias rlc='rake log:clear'
-alias sc='./script/console'
-alias ss='./script/server'
+alias sc='rails c'
+alias ss='rails s'
 
 ###################################
 

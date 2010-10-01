@@ -65,15 +65,15 @@ rescue LoadError
   puts "Error loading Wirble. Run 'sudo gem install wirble' to enable colorized results."
 end
 
-begin
-  require 'what_methods'
-rescue LoadError
-  puts "Error loading module what_methods"
-end
+# begin
+#   require 'what_methods'
+# rescue LoadError
+#   puts "Error loading module what_methods"
+# end
 
-begin
-  require 'hirb'
-#  Hirb.enable :pager=>false
-rescue LoadError
-  puts "Error loading module hirb"
-end
+# begin
+#   require 'hirb'
+# #  Hirb.enable :pager=>false
+# rescue LoadError
+#   puts "Error loading module hirb"
+# end
