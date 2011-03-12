@@ -85,8 +85,6 @@ PROMPT_COMMAND=prompt_func
 ###################################
 # ALIASES
 ###################################
-alias ang_backup='ruby /Users/josephgrossberg/Library/Preferences/Angband/save/backup.rb'
-alias ang_restore='cd ~/Library/Preferences/Angband/save/ && cp $(ls | tail -n3 | head -1) Went'
 alias bc='bc -l'
 alias cpan='perl -MCPAN -e shell'
 alias ducks='du -cks * |sort -rn |head -11'
@@ -94,22 +92,18 @@ alias eamcs='emacs'
 alias fn='find . -name'
 alias gem='sudo gem'
 alias guid='mysql -u root -e"select uuid();"'
-alias joegrossberg='ssh joegross@joegrossberg.com'
 alias ls='ls -bG'
 alias la='ls -abG'
 alias ll='ls -abGl'
 alias lynx='/Applications/Lynxlet.app/Contents/Resources/lynx/bin/lynx'
 alias now='ruby -e "puts Time.now.utc.to_i"'
 alias rr='railroad -M | dot -Tsvg > doc/database/models.svg; railroad -M | neato -Tpng > doc/database/models.png'
+alias tgz='tar -pczf'
 
 ###################################
 # WORK ALIASES
 ###################################
 alias hm='cd ~/cer_portal/'
-alias intridea='cd ~/intridea/newsite'
-alias iu='cd ~/intridea_university/ruby-on-rails'
-alias log='cd /var/log/apache2'
-alias pl='cd ~/presently'
 alias rlc='rake log:clear'
 alias sc='rails c'
 alias ss='rails s'
