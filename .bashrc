@@ -103,7 +103,7 @@ alias tgz='tar -pczf'
 ###################################
 # WORK ALIASES
 ###################################
-alias hm='cd ~/cer_portal/'
+alias hm='cd ~'
 alias rlc='rake log:clear'
 alias sc='rails c'
 alias ss='rails s'
