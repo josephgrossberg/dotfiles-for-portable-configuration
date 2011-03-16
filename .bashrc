@@ -9,15 +9,11 @@ fi
 ###################################
 # PATHS
 ###################################
-source /sw/bin/init.sh
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-#export PATH=/opt/jruby/bin:$PATH
 export PATH=~/bin:$PATH
-export PATH=/android-sdk-mac_86/tools:$PATH
-export PATH=/usr/bin:$PATH
-export PATH=/usr/local/pgsql/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
+export PATH=/Library/PostgreSQL/9.0/bin/:$PATH
 
 ###################################
 # SETTINGS
@@ -92,6 +88,7 @@ alias eamcs='emacs'
 alias fn='find . -name'
 alias gem='sudo gem'
 alias guid='mysql -u root -e"select uuid();"'
+alias joegrossberg='ssh joegross@joegrossberg.com'
 alias ls='ls -bG'
 alias la='ls -abG'
 alias ll='ls -abGl'
