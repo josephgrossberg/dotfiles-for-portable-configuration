@@ -15,38 +15,11 @@
 (setq-default transient-mark-mode t)
 (setq next-line-add-newlines nil)
 (setq blink-matching-paren nil)
-(global-font-lock-mode 1 t)
 (blink-cursor-mode -1)
-(if (eq system-type 'gnu/linux) (tooltip-mode -1) ) ; win32 emacs
 
 (set-foreground-color "#dbdbdb")
 (set-background-color "#000000")
 (set-cursor-color "#ffffff")
-
-(if (> (display-color-cells) 20)
-    (custom-set-faces
-     '(font-lock-builtin-face ((t (:foreground "deepskyblue"))))
-     '(font-lock-comment-face ((t (:foreground "gray60"))))
-     '(font-lock-doc-face ((t (:foreground "darkkhaki"))))
-     '(font-lock-keyword-face ((t (:foreground "magenta"))))
-     '(font-lock-function-name-face ((t (:foreground "green" :background "seagreen"))))
-     '(font-lock-string-face ((t (:foreground "gold"))))
-     '(font-lock-type-face ((t (:foreground "cyan" :background "slateblue"))))
-     '(font-lock-variable-name-face ((t (:foreground "yellow"))))
-
-     '(modeline ((t (:foreground "plum1" :background "navy"))))
-     '(region ((t (:background "sienna"))))
-     '(highlight ((t (:foreground "black" :background "darkseagreen2"))))
-     '(fringe ((t (:foreground "lawngreen" :background "gray10"))))
-     '(isearch-lazy-highlight-face ((t (:foreground "black" :background "paleturquoise"))))
-     '(mouse ((t (:background "green"))))
-
-     '(diff-added-face ((t (:foreground "green"))))
-     '(diff-changed-face ((t (:foreground "yellow"))))
-     '(diff-header-face ((t (:foreground "cyan"))))
-     '(diff-hunk-header-face ((t (:foreground "magenta"))))
-     '(diff-removed-face ((t (:foreground "red")))))
-  )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; KEYS
@@ -67,32 +40,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MODE STUFF
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; python
-(autoload 'python-mode "python-mode" t)
-(setq auto-mode-alist (cons '("\\.py$" . python-mode) auto-mode-alist))
-(setq-default intend-tabs-mode nil)
-(setq-default tab-width 4)
-
-(defun untabify-buffer()
-  (interactive)
-  "Untabify the current buffer.  Return nil.
-  Must return nil, if added to write-file-hooks."
-  (save-excursion
-    (goto-char (point-min))
-    (while (re-search-forward "[ \t]+$" nil t)
-      (delete-region (match-beginning 0) (match-end 0)))
-    (goto-char (point-min))
-    (if (search-forward "\t" nil t)
-        (untabify (1- (point)) (point-max))))
-  nil)
-
-(setq python-mode-hook
-      '(lambda () (progn
-                    (add-hook 'write-file-hooks 'untabify-buffer)
-                    (set-variable 'py-indent-offset 4)
-                    (set-variable 'py-smart-indentation nil)
-                    (set-variable 'indent-tabs-mode nil) )))
-
 ;; ruby
 (autoload 'ruby-mode "ruby-mode" t)
 (setq auto-mode-alist (cons '("\\.rb$" . ruby-mode) auto-mode-alist))
@@ -105,34 +52,10 @@
 (autoload 'haml-mode "haml-mode" t)
 (setq auto-mode-alist (cons '("\\.haml$" . haml-mode) auto-mode-alist))
 
-(setq auto-mode-alist (cons '("\\.xsd$" . xml-mode) auto-mode-alist))
-
-;; php
-(autoload 'php-mode "php-mode" t)
-(setq auto-mode-alist (cons '("\\.php$" . php-mode) auto-mode-alist))
-
-;(defun php-mode-hook ()
-;  (setq tab-width 4
-;        c-basic-offset 4
-;        c-hanging-comment-ender-p nil
-;        indent-tabs-mode
-;  (not
-;    (and (string-match "/\\(PEAR\\|pear\\)/" (buffer-file-name))
-;      (string-match "\.php$" (buffer-file-name))))))
-
-;; cvs
-;(setq vc-default-back-end 'CVS)
-;(autoload 'cvs-add "cvs-add" "CVS add" t)
-;(autoload 'cvs-commit "cvs-commit" "CVS commit" t)
-;(autoload 'cvs-diff "cvs-diff" "CVS diff" t)
-
 ;; other modes
 (setq auto-mode-alist (cons '("\\.js$" . java-mode) auto-mode-alist))
-;(setq auto-mode-alist (cons '("\\.rsel$" . java-mode) auto-mode-alist))
 (autoload 'yaml-mode "yaml-mode" t)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-;(autoload 'erlang "erlang" t)
-;(add-to-list 'auto-mode-alist '("\\.erl$" . erlang-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MISC

@@ -13,7 +13,6 @@ export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/b
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=~/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
-export PATH=/Library/PostgreSQL/9.0/bin/:$PATH
 
 ###################################
 # SETTINGS
@@ -27,8 +26,7 @@ export MANPATH=$MANPATH:/usr/X11R6/man
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET'
-export ANDROID_SDK="/android-sdk-mac_86/"
-export PDGDATA='/usr/local/pgsql/data'
+export SOLR_HOME=~/projects/solr14
 
 ###################################
 # PROMPT
