@@ -53,7 +53,7 @@
 (setq auto-mode-alist (cons '("\\.haml$" . haml-mode) auto-mode-alist))
 
 ;; other modes
-(setq auto-mode-alist (cons '("\\.js$" . java-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.js$" . javascript-mode) auto-mode-alist))
 (autoload 'yaml-mode "yaml-mode" t)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 

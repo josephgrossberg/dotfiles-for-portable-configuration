@@ -98,7 +98,7 @@ alias tgz='tar -pczf'
 ###################################
 # WORK ALIASES
 ###################################
-alias hm='cd ~'
+alias hm='cd ~/projects/sbn/'
 alias rlc='rake log:clear'
 alias sc='rails c'
 alias ss='rails s'

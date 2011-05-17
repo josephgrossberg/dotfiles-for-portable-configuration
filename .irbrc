@@ -56,14 +56,13 @@ def paste
 end
   
 # Inline colorized ri (override wirble's)
-begin
-  require 'rubygems'
-  require 'wirble'
-  Wirble.init
-  Wirble.colorize
-rescue LoadError
-  puts "Error loading Wirble. Run 'sudo gem install wirble' to enable colorized results."
-end
+# begin
+#   require 'wirble'
+#   Wirble.init
+#   Wirble.colorize
+# rescue LoadError
+#   puts "Error loading Wirble. Run 'sudo gem install wirble' to enable colorized results."
+# end
 
 # begin
 #   require 'what_methods'
