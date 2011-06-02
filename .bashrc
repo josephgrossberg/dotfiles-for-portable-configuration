@@ -117,5 +117,7 @@ alias ss='rails s'
 # user >| to ignore a noclobber bit
 # ls -l $(cat listing.txt) to run one command as the arg of another
 # !$ prev command
+# !! prev line
 # !:1 prev (first) argument
 # all apps using internet connection: lsof -P -i -n | cut -f 1 -d " " | uniq
+# diff <(git ls-files) <(find . -type f)

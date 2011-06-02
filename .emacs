@@ -1,6 +1,6 @@
 (defvar *emacs-load-start* (car (last (current-time))))
 
-(setq additional-paths '("/Users/josephgrossberg/" "/Users/josephgrossberg/lisp"))
+(setq additional-paths '("/Users/josephgrossberg/" "/Users/josephgrossberg/lisp" "/Users/joegrossberg/lisp"))
 (setq load-path (append additional-paths load-path))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
