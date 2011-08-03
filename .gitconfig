@@ -4,6 +4,7 @@
 	bare = false
 	logallrefupdates = true
 	pager = cat
+        editor = emacs
 [color]
 	diff = auto
 	status = auto
