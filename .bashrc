@@ -79,29 +79,16 @@ PROMPT_COMMAND=prompt_func
 ###################################
 # ALIASES
 ###################################
-alias bc='bc -l'
-alias cpan='perl -MCPAN -e shell'
-alias ducks='du -cks * |sort -rn |head -11'
-alias eamcs='emacs'
-alias fn='find . -name'
-alias gem='sudo gem'
-alias guid='mysql -u root -e"select uuid();"'
-alias joegrossberg='ssh joegross@joegrossberg.com'
-alias ls='ls -bG'
-alias la='ls -abG'
-alias ll='ls -abGl'
-alias lynx='/Applications/Lynxlet.app/Contents/Resources/lynx/bin/lynx'
-alias now='ruby -e "puts Time.now.utc.to_i"'
-alias rr='railroad -M | dot -Tsvg > doc/database/models.svg; railroad -M | neato -Tpng > doc/database/models.png'
-alias tgz='tar -pczf'
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
 
 ###################################
 # WORK ALIASES
 ###################################
-alias hm='cd ~/projects/sbn/'
-alias rlc='rake log:clear'
-alias sc='rails c'
-alias ss='rails s'
+if [ -f ~/.bash_aliases_work ]; then
+    . ~/.bash_aliases_work
+fi
 
 ###################################
 
