@@ -10,7 +10,7 @@ fi
 # PATHS
 ###################################
 export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=~/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
 
@@ -48,6 +48,15 @@ fi
 if [ -f ~/.bash_aliases_work ]; then
     . ~/.bash_aliases_work
 fi
+
+###################################
+# GIT ALIASES
+###################################
+if [ -f ~/git-completion.bash ]; then
+    . ~/git-completion.bash
+fi
+
+[[ -s "/Users/joegrossberg/.rvm/scripts/rvm" ]] && source "/Users/joegrossberg/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 ###################################
 
