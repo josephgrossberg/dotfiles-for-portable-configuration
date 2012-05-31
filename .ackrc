@@ -1,4 +1,17 @@
+--ignore-dir
+.bundle
+
+--type-add
+ruby=.rabl,.gemspec
+
+--type-set
+markdown=.md
+
+--type-set
+coffee=.coffee
+
 --type-add
 html=.haml
+
 --type-add
 css=.sass,.scss
