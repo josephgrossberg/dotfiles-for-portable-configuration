@@ -13,7 +13,7 @@ function parse_git_branch {
   remote_pattern="# Your branch is (.*) of"
   diverge_pattern="# Your branch and (.*) have diverged"
   if [[ ! ${git_status}} =~ "working directory clean" ]]; then
-state="${RED}❖"
+state="${RED}Δ"
   fi
   if [[ ! ${git_log_oneline}} =~ "       0" ]]; then
 needs_push="${GREEN}P"
