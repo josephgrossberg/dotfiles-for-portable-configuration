@@ -27,7 +27,6 @@
 	st = status
 	ci = commit
 	co = checkout
-	lc = log ORIG_HEAD.. --stat --no-merges
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [user]
 	name = Joe Grossberg
