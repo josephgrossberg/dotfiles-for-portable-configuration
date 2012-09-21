@@ -10,8 +10,12 @@ alias la='ls -abG'
 alias ll='ls -abGl'
 alias lynx='/Applications/Lynxlet.app/Contents/Resources/lynx/bin/lynx'
 alias now='ruby -e "puts Time.now.utc.to_i"'
-alias rr='railroad -M | dot -Tsvg > doc/database/models.svg; railroad -M | neato -Tpng > doc/database/models.png'
+alias rlc='rake log:clear'
 alias tgz='tar -pczf'
 
 # git ones
+function gitbranch {
+  git checkout -b "$1";
+  git push -u origin "$1";
+}
 alias gitlg='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cn%Creset %Cblue%cr%Creset'\'' --abbrev-commit --date=relative'
