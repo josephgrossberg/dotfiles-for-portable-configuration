@@ -7,15 +7,12 @@
 ;; APPEARANCE
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq inhibit-startup-message t)
-(setq font-lock-maximum-decoration t)
 (setq visible-bell t)
 (setq require-final-newline t)
 (setq resize-minibuffer-frame t)
-(setq column-number-mode t)
 (setq-default transient-mark-mode t)
 (setq next-line-add-newlines nil)
 (setq blink-matching-paren nil)
-(blink-cursor-mode -1)
 (menu-bar-mode -1)
 
 (require 'powerline)
