@@ -1,6 +1,6 @@
 (defvar *emacs-load-start* (car (last (current-time))))
 
-(setq additional-paths '("/Users/josephgrossberg/" "/Users/josephgrossberg/lisp" "/Users/joegrossberg/lisp"))
+(setq additional-paths '("~/.emacs.d" "~/lisp"))
 (setq load-path (append additional-paths load-path))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -16,21 +16,20 @@
 (setq next-line-add-newlines nil)
 (setq blink-matching-paren nil)
 (blink-cursor-mode -1)
+(menu-bar-mode -1)
 
-(set-foreground-color "#dbdbdb")
-(set-background-color "#000000")
-(set-cursor-color "#ffffff")
+(require 'powerline)
+(powerline-default)
+
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; KEYS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq suggest-key-bindings t)
-;;(setq meta-command-modifier 'control)
-;;(setq control-command-modifier 'meta)
 (global-set-key [delete] 'delete-char)
 (global-set-key [kp-delete] 'delete-char)
 (global-set-key "\C-h" 'backward-delete-char)
-;;(normal-erase-is-backspace-mode)
 (global-set-key "\C-x\ ?" 'help)
 (global-set-key "\C-c\ l" 'goto-line)
 (global-set-key "\C-x\ f" 'find-file-other-window)
