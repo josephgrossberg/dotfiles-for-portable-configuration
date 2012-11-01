@@ -18,6 +18,7 @@
 (require 'powerline)
 (powerline-default)
 
+(set-face-background 'region "#333")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
