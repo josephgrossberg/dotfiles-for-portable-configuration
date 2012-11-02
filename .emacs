@@ -19,6 +19,7 @@
 (powerline-default)
 
 (set-face-background 'region "#333")
+(set-face-background 'isearch-fail "color-52")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
