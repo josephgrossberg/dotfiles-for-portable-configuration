@@ -15,6 +15,13 @@
 (setq blink-matching-paren nil)
 (menu-bar-mode -1)
 
+;; tab = two spaces
+(setq default-tab-width 2)
+(setq-default tab-width 2)
+(setq-default indent-tabs-mode nil)
+(setq css-indent-offset 2)
+(setq-default js-indent-level 2)
+
 (require 'powerline)
 (powerline-default)
 
