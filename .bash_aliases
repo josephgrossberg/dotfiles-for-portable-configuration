@@ -1,4 +1,5 @@
 alias bc='bc -l'
+alias chomp="tr -d '\n'"
 alias cpan='perl -MCPAN -e shell'
 alias ducks='du -cks * |sort -rn |head -11'
 alias eamcs='emacs'
@@ -12,6 +13,7 @@ alias lynx='/Applications/Lynxlet.app/Contents/Resources/lynx/bin/lynx'
 alias now='ruby -e "puts Time.now.utc.to_i"'
 alias rlc='rake log:clear'
 alias tgz='tar -pczf'
+alias uuid='python -c "import uuid; print uuid.uuid4()"'
 
 # git ones
 function gitbranch {
