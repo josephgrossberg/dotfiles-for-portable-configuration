@@ -76,3 +76,5 @@ fi
 # !:1 prev (first) argument
 # all apps using internet connection: lsof -P -i -n | cut -f 1 -d " " | uniq
 # diff <(git ls-files) <(find . -type f)
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
