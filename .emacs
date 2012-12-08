@@ -26,8 +26,8 @@
 (powerline-default)
 
 (set-face-background 'region "#333")
-(set-face-background 'isearch-fail "#600")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(if (facep 'isearch-fail) (set-face-background 'isearch-fail "#600") )
+(if (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path "~/.emacs.d/themes"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; KEYS
