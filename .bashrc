@@ -22,6 +22,7 @@ export VISUAL=emacs
 export PAGER=cat
 export HISTSIZE=20000
 export HISTFILESIZE=20000
+export HISTTIMEFORMAT='%Y-%m-%d %H:%M:%S - '
 export MANPATH=$MANPATH:/usr/X11R6/man
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
