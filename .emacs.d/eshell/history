@@ -1,1 +1,7 @@
 ls -l
+git st
+git push
+exit
+git st
+rm .emacs.d/eshell/history 
+exit
