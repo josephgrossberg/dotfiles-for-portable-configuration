@@ -27,6 +27,7 @@ export MANPATH=$MANPATH:/usr/X11R6/man
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET'
+export SOLR_HOME=~/projects/solr14
 
 ###################################
 # PROMPT

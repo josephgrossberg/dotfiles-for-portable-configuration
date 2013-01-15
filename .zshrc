@@ -16,6 +16,7 @@ MANPATH=$MANPATH:/usr/X11R6/man
 GREP_OPTIONS='--color=auto'
 GREP_COLOR='1;33'
 LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET'
+export SOLR_HOME=~/projects/solr14 # export to make available to foreman
 
 ###################################
 # HISTORY
@@ -60,7 +61,7 @@ fi
 ###################################
 # RVM STUFF
 ###################################
-[[ -s "/Users/joegrossberg/.rvm/scripts/rvm" ]] && source "/Users/joegrossberg/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ###################################
@@ -82,3 +83,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # !:1 prev (first) argument
 # all apps using internet connection: lsof -P -i -n | cut -f 1 -d " " | uniq
 # diff <(git ls-files) <(find . -type f)
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
