@@ -17,6 +17,9 @@ GREP_OPTIONS='--color=auto'
 GREP_COLOR='1;33'
 LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET'
 export SOLR_HOME=~/projects/solr14 # export to make available to foreman
+GIT_EMAIL_START=josephgrossberg
+GIT_COMMITTER_EMAIL=$GIT_EMAIL_START'+github@gmail.com'
+GIT_AUTHOR_EMAIL=$GIT_EMAIL_START'+github@gmail.com'
 
 ###################################
 # HISTORY
@@ -37,6 +40,9 @@ echo "TODO: history time format"
 setopt completeinword
 # tab completion should be case-insensitive.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+# word boundaries dont cross slashes (expunge the '/' character from the list
+# of characters that are part of words)
+WORDCHARS=${WORDCHARS//\//}
 
 ###################################
 # PROMPT
