@@ -1,8 +1,14 @@
 ###################################
+# INITIAL SETUP
+###################################
+autoload -U compinit promptinit
+compinit # command completion
+promptinit # prompt customization
+
+###################################
 # PATHS
 ###################################
 export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
-#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=~/bin:$PATH
 export PATH=/usr/local/git/bin:$PATH
 
@@ -12,24 +18,39 @@ export PATH=/usr/local/git/bin:$PATH
 export EDITOR=emacs
 export VISUAL=emacs
 export PAGER=cat
-export HISTSIZE=20000
-export HISTFILESIZE=20000
-export HISTTIMEFORMAT='%Y-%m-%d %H:%M:%S - '
 export MANPATH=$MANPATH:/usr/X11R6/man
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET'
 
-echo "TODO: retain history after logout"
+###################################
+# HISTORY
+###################################
+export HISTTIMEFORMAT='%Y-%m-%d %H:%M:%S - '
+HISTFILE=~/.zhistory
+HISTSIZE=SAVEHIST=10000
+setopt incappendhistory 
+setopt sharehistory
+setopt extendedhistory
+
+###################################
+# ZSH CONFIG
+###################################
+# tab completion from both ends.
+setopt completeinword
+# tab completion should be case-insensitive.
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 
 ###################################
 # PROMPT
 ###################################
 PS1='.:[ %~ ]:.
 $ '
-echo "TODO: git stuff in prompt"
-
 echo "TODO: oh my zsh"
+echo "TODO: git branch in prompt"
+echo "TODO: git branch status"
+echo "TODO: git branch name completion"
 
 ###################################
 # ALIASES
@@ -46,17 +67,15 @@ if [ -f ~/.zsh_aliases_work ]; then
 fi
 
 ###################################
-# GIT ALIASES
+# RVM STUFF
 ###################################
-#if [ -f ~/git-completion.zsh ]; then
-#    . ~/git-completion.zsh
-#fi
-echo "TODO: git branch completion"
-
 [[ -s "/Users/joegrossberg/.rvm/scripts/rvm" ]] && source "/Users/joegrossberg/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
-###################################
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+###################################
+# NOTES
+###################################
 # &> to redirect STDOUT and STDERR
 # 2>&1 to redirect STDERR to STDOUT
 # { pwd; ls } > /foo/bar to group output together
@@ -73,5 +92,3 @@ echo "TODO: git branch completion"
 # !:1 prev (first) argument
 # all apps using internet connection: lsof -P -i -n | cut -f 1 -d " " | uniq
 # diff <(git ls-files) <(find . -type f)
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
