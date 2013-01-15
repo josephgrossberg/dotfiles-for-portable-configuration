@@ -6,15 +6,9 @@ compinit # command completion
 promptinit # prompt customization
 
 ###################################
-# PATHS
+# ENVIRONMENT VARS
 ###################################
-export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
-export PATH=~/bin:$PATH
-export PATH=/usr/local/git/bin:$PATH
-
-###################################
-# SETTINGS
-###################################
+export PATH=~/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
 export EDITOR=emacs
 export VISUAL=emacs
 export PAGER=cat
@@ -41,16 +35,15 @@ setopt completeinword
 # tab completion should be case-insensitive.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-
 ###################################
 # PROMPT
 ###################################
 PS1='.:[ %~ ]:.
 $ '
 echo "TODO: oh my zsh"
-echo "TODO: git branch in prompt"
-echo "TODO: git branch status"
-echo "TODO: git branch name completion"
+echo "* git branch in prompt"
+echo "* git branch status"
+echo "* git branch name completion"
 
 ###################################
 # ALIASES
@@ -58,10 +51,6 @@ echo "TODO: git branch name completion"
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
-
-###################################
-# WORK ALIASES
-###################################
 if [ -f ~/.zsh_aliases_work ]; then
     . ~/.zsh_aliases_work
 fi
@@ -70,11 +59,10 @@ fi
 # RVM STUFF
 ###################################
 [[ -s "/Users/joegrossberg/.rvm/scripts/rvm" ]] && source "/Users/joegrossberg/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ###################################
-# NOTES
+# NOTES ON SHELL STUFF
 ###################################
 # &> to redirect STDOUT and STDERR
 # 2>&1 to redirect STDERR to STDOUT
