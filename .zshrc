@@ -8,24 +8,26 @@ promptinit # prompt customization
 ###################################
 # ENVIRONMENT VARS
 ###################################
-export PATH=~/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
-export EDITOR=emacs
-export VISUAL=emacs
-export PAGER=cat
-export MANPATH=$MANPATH:/usr/X11R6/man
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='1;33'
-export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET'
+PATH=~/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
+EDITOR=emacs
+VISUAL=emacs
+PAGER=cat
+MANPATH=$MANPATH:/usr/X11R6/man
+GREP_OPTIONS='--color=auto'
+GREP_COLOR='1;33'
+LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET'
 
 ###################################
 # HISTORY
 ###################################
-export HISTTIMEFORMAT='%Y-%m-%d %H:%M:%S - '
+HISTTIMEFORMAT='%Y-%m-%d %H:%M:%S - '
 HISTFILE=~/.zhistory
 HISTSIZE=SAVEHIST=10000
 setopt incappendhistory 
 setopt sharehistory
 setopt extendedhistory
+
+echo "TODO: history time format"
 
 ###################################
 # ZSH CONFIG
