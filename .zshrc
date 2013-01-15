@@ -1,8 +1,35 @@
-echo "TODO: header"
+###################################
+# PATHS
+###################################
+export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
+#export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=~/bin:$PATH
+export PATH=/usr/local/git/bin:$PATH
 
-echo "TODO: default"
+###################################
+# SETTINGS
+###################################
+export EDITOR=emacs
+export VISUAL=emacs
+export PAGER=cat
+export HISTSIZE=20000
+export HISTFILESIZE=20000
+export HISTTIMEFORMAT='%Y-%m-%d %H:%M:%S - '
+export MANPATH=$MANPATH:/usr/X11R6/man
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;33'
+export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET'
 
-echo "TODO: bashrc stuff"
+echo "TODO: retain history after logout"
+
+###################################
+# PROMPT
+###################################
+PS1='.:[ %~ ]:.
+$ '
+echo "TODO: git stuff in prompt"
+
+echo "TODO: oh my zsh"
 
 ###################################
 # ALIASES
