@@ -21,14 +21,11 @@ export SOLR_HOME=~/projects/solr14 # export to make available to foreman
 ###################################
 # HISTORY
 ###################################
-HISTTIMEFORMAT='%Y-%m-%d %H:%M:%S - '
-HISTFILE=~/.zhistory
+HISTFILE=~/.zsh_history
 HISTSIZE=SAVEHIST=10000
 setopt incappendhistory 
 setopt sharehistory
 setopt extendedhistory
-
-echo "TODO: history time format"
 
 ###################################
 # ZSH CONFIG
