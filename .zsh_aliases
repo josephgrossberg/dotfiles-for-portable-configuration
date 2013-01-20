@@ -27,3 +27,11 @@ function gitbranch {
   git push -u origin "$1";
 }
 alias gitlg='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cn%Creset %Cblue%cr%Creset'\'' --abbrev-commit --date=relative'
+
+# Found here: https://github.com/mattsacks/dotfiles/blob/master/zshrc
+function ffind() {
+    find . -type f -iname "*${1}*";
+}
+function pbcat() {
+    cat ${1} | pbcopy
+}
