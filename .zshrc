@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh configuration.
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="muse"
+ZSH_THEME="muse-joe"
 # awesome ones: muse
 # cool ones: garyblessington, kolo (dots), minimal
 
