@@ -4,6 +4,12 @@
 --type-add
 ruby=.rabl,.gemspec
 
+--type-add
+js=.json
+
+--type-add
+css=.scss,.scss
+
 --type-set
 markdown=.md
 
