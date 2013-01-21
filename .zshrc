@@ -4,10 +4,7 @@ ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh configuration.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="muse-joe"
-# awesome ones: muse
-# cool ones: garyblessington, kolo (dots), minimal
+ZSH_THEME="joegrossberg"
 
 # Comment this out to disable bi-weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
