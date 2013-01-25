@@ -38,11 +38,11 @@ promptinit # prompt customization
 PATH=~/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
 EDITOR=emacs
 VISUAL=emacs
-PAGER=cat
+PAGER=most
 MANPATH=$MANPATH:/usr/X11R6/man
 GREP_OPTIONS='--color=auto'
 GREP_COLOR='1;33'
-LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET'
+LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
 export SOLR_HOME=~/projects/solr14 # export to make available to foreman
 
 ###################################
