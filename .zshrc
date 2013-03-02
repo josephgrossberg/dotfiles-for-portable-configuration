@@ -64,6 +64,8 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # word boundaries dont cross slashes (expunge the '/' character from the list
 # of characters that are part of words)
 WORDCHARS=${WORDCHARS//\//}
+# From https://github.com/robbyrussell/oh-my-zsh/issues/238
+setopt NO_cdable_vars
 
 ###################################
 # PROMPT
