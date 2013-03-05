@@ -25,7 +25,10 @@
 (require 'powerline)
 (powerline-default)
 
+(load-theme 'manoj-dark t)
+(set-face-background 'default "#000")
 (set-face-background 'region "#333")
+(set-face-foreground 'mode-line "#000")
 (if (facep 'isearch-fail) (set-face-background 'isearch-fail "#600") )
 (if (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path "~/.emacs.d/themes"))
 
