@@ -1,2 +1,3 @@
-set nocompatible
-filetype plugin on
+syntax on
+filetype plugin indent on
+
