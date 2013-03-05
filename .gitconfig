@@ -36,3 +36,5 @@
 	whitespace = nowarn
 [push]
 	default = current
+[pull]
+	rebase = true
