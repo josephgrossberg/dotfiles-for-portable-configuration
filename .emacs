@@ -42,7 +42,6 @@
 (global-set-key "\C-x\ ?" 'help)
 (global-set-key "\C-c\ l" 'goto-line)
 (global-set-key "\C-x\ f" 'find-file-other-window)
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 (global-set-key "\C-z" nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -82,7 +81,9 @@
 ;; recentf stuff
 (autoload 'recentf "recentf" t)
 (recentf-mode 1)
+(setq recentf-max-saved-items 50)
 (setq recentf-max-menu-items 50)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 ;; autorevert stuff
 (autoload 'auto-revert-mode "autorevert" nil t)
