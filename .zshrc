@@ -44,6 +44,8 @@ GREP_OPTIONS='--color=auto'
 GREP_COLOR='1;33'
 LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
 export SOLR_HOME=~/projects/solr14 # export to make available to foreman
+# z
+. ~/bin/z/z.sh
 
 ###################################
 # HISTORY
