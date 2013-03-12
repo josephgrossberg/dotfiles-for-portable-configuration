@@ -25,6 +25,16 @@
 (require 'powerline)
 (powerline-default)
 
+(require 'package)
+(package-initialize)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/") t)
+
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
 (load-theme 'manoj-dark t)
 (set-face-background 'default "#000")
 (set-face-background 'region "#333")
