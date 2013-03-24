@@ -60,7 +60,7 @@ setopt extendedhistory
 # ZSH CONFIG
 ###################################
 # tab completion from both ends.
-setopt completeinword
+#setopt completeinword
 # tab completion should be case-insensitive.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # word boundaries dont cross slashes (expunge the '/' character from the list
