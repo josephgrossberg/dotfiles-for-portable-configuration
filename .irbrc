@@ -6,6 +6,7 @@ require 'irb/completion'
 require 'irb/ext/save-history'
 
 IRB.conf[:USE_READLINE] = true
+IRB.conf[:EVAL_HISTORY] = 1000
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_PATH] = File::expand_path("~/.irb.history")
 
@@ -45,6 +46,17 @@ class Object
     puts "Instance Methods", "-"*16, i_list.inspect, '' unless i_list.empty?
     puts "Ancestors", "-"*9, a_list.inspect, '' unless a_list.empty?
   end
+
+  def interesting_methods
+    case self.class
+    when Class
+      self.public_methods.sort - Object.public_methods
+    when Module
+      self.public_methods.sort - Module.public_methods
+    else
+      self.public_methods.sort - Object.new.public_methods
+    end
+  end
 end
 
 def copy(str)
@@ -55,24 +67,9 @@ def paste
   `pbpaste`
 end
   
-# Inline colorized ri (override wirble's)
-# begin
-#   require 'wirble'
-#   Wirble.init
-#   Wirble.colorize
-# rescue LoadError
-#   puts "Error loading Wirble. Run 'sudo gem install wirble' to enable colorized results."
-# end
-
-# begin
-#   require 'what_methods'
-# rescue LoadError
-#   puts "Error loading module what_methods"
-# end
-
-# begin
-#   require 'hirb'
-# #  Hirb.enable :pager=>false
-# rescue LoadError
-#   puts "Error loading module hirb"
-# end
+begin
+  require 'awesome_print'
+  AwesomePrint.irb!
+rescue LoadError => err
+  warn "Couldn't load awesome_print: #{err}"
+end
