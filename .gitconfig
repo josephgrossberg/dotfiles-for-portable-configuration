@@ -4,7 +4,7 @@
 	bare = false
 	logallrefupdates = true
 	pager = cat
-  editor = emacs -q -l ~/safer-init-file.el
+  editor = emacs -q -l ~/git-init-file.el
 [color]
 	diff = auto
 	status = auto
