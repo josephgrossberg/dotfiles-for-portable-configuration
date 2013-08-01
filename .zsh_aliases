@@ -22,6 +22,11 @@ function joegrossberg {
   ssh $USER"@"$DOMAIN;
 }
 
+# Make directory and change into it.
+function mcd() {
+  mkdir -p "$1" && cd "$1";
+}
+
 # Complete g like git
 compdef g=git
 
