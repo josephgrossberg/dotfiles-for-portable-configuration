@@ -22,7 +22,10 @@ function joegrossberg {
   ssh $USER"@"$DOMAIN;
 }
 
-# git ones
+# Complete g like git
+compdef g=git
+
+# other git ones
 function gitbranch {
   git checkout -b "$1";
   git push -u origin "$1";
