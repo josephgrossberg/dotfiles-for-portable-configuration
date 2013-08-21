@@ -4,3 +4,4 @@ alias pullall='cd ~/projects/sbn-ios && git pull && cd ~/projects/sbn && git pul
 alias chrome_iphone='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome -user-agent="iPhone Vox"'
 alias gotomeeting='cat ~/gotomeeting.txt | pbcopy'
 alias chorus='tmux -f ~/chorus.tmux attach'
+alias gitmerge='hm && git co master && git pull && git co ad_products && git pull && git merge master'
