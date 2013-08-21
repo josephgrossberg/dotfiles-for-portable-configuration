@@ -35,7 +35,7 @@ promptinit # prompt customization
 ###################################
 # ENVIRONMENT VARS
 ###################################
-PATH=~/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
+PATH=~/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:/usr/local/Cellar/ruby/1.9.3-p362/bin:$PATH
 EDITOR=emacs
 VISUAL=emacs
 PAGER=most
