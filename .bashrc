@@ -44,8 +44,11 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 ###################################
-# WORK ALIASES
+# WORK STUFF
 ###################################
+if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile
+fi
 if [ -f ~/.bash_aliases_work ]; then
     . ~/.bash_aliases_work
 fi

@@ -5,3 +5,6 @@ alias chrome_iphone='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chr
 alias gotomeeting='cat ~/gotomeeting.txt | pbcopy'
 alias chorus='tmux -f ~/chorus.tmux attach'
 alias gitmerge='hm && git co master && git pull && git co ad_products && git pull && git merge master'
+
+# workstation stuff for Chorus
+# bash ~/.bash_profile
