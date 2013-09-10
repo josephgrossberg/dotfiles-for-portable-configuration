@@ -44,6 +44,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; APPEARANCE
+;; TODO: combine w above "APPEARANCE"?
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-theme 'manoj-dark t)
 (set-face-background 'default "#000")
@@ -149,3 +150,4 @@
 ; grep-find
 
 (message "My .emacs loaded in %s seconds" (/ (- (car (last (current-time))) *emacs-load-start*) 100000.0))
+(recentf-open-files)
