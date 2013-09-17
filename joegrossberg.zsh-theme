@@ -13,6 +13,7 @@ GIT_DIRTY_COLOR=$FG[196]
 GIT_CLEAN_COLOR=$FG[022]
 GIT_PROMPT_INFO=$FG[012]
 
+# todo: invert colors for first part and second part
 PROMPT='%{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}
 %{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}%{$PROMPT_PROMPT%}»%{$reset_color%} '
 
