@@ -91,6 +91,8 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (autoload 'yaml-mode "yaml-mode" t)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(autoload 'brightscript-mode "brightscript-mode" t)
+(setq auto-mode-alist (cons '("\\.brs$" . brightscript-mode) auto-mode-alist))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MISC
