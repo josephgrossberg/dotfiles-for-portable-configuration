@@ -5,6 +5,7 @@
   logallrefupdates = true
   pager = cat
   editor = emacs -q -l ~/git-init-file.el
+  ignorecase = false
 [color]
   diff = auto
   status = auto

@@ -23,6 +23,7 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git gitfast)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.zprofile
 
 # Customize to your needs...
 ###################################
@@ -35,7 +36,10 @@ promptinit # prompt customization
 ###################################
 # ENVIRONMENT VARS
 ###################################
-PATH=~/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:/usr/local/Cellar/ruby/1.9.3-p362/bin:$PATH
+PATH=~/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
+PATH=~/bin:$PATH
+PATH=/usr/local/git/bin:$PATH
+
 EDITOR=emacs
 VISUAL=emacs
 PAGER=most
@@ -43,7 +47,6 @@ MANPATH=$MANPATH:/usr/X11R6/man
 GREP_OPTIONS='--color=auto'
 GREP_COLOR='1;33'
 LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
-export SOLR_HOME=~/projects/solr14 # export to make available to foreman
 # z
 . ~/bin/z/z.sh
 
@@ -88,8 +91,8 @@ fi
 ###################################
 # RVM STUFF
 ###################################
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ###################################
 # NOTES ON SHELL STUFF
