@@ -26,6 +26,8 @@
 (powerline-default)
 
 (package-initialize)
+; others needed? smex, git-gutter, magit
+; via M-x package-install RET magit RET
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
@@ -35,7 +37,7 @@
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
-;; This is your old M-x.
+; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 (require 'git-gutter)
@@ -72,10 +74,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; erlang
 ;; TODO: work around hard-coded, version specific paths
-(setq load-path (cons  "/usr/local/Cellar/erlang/R16B03/lib/erlang/lib/tools-2.6.13/emacs"
+(setq load-path (cons  "/usr/local/Cellar/erlang/R16B03-1/lib/erlang/lib/tools-2.6.13/emacs"
       load-path))
-      (setq erlang-root-dir "/usr/local/Cellar/erlang/R16B03/lib/erlang")
-      (setq exec-path (cons "/usr/local/Cellar/erlang/R16B03/lib/erlang/bin" exec-path))
+      (setq erlang-root-dir "/usr/local/Cellar/erlang/R16B03-1/lib/erlang")
+      (setq exec-path (cons "/usr/local/Cellar/erlang/R16B03-1/lib/erlang/bin" exec-path))
       (require 'erlang-start)
 ;; see: http://bob.ippoli.to/archives/2007/03/14/erlang-mode-for-emacs/
 ;(defvar inferior-erlang-prompt-timeout t)
