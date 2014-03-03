@@ -96,8 +96,6 @@
 (setq auto-mode-alist (cons '("\\.scss$" . css-mode) auto-mode-alist))
 (autoload 'haml-mode "haml-mode" t)
 (setq auto-mode-alist (cons '("\\.haml$" . haml-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.\\(p\\(?:k[bg]\\|ls\\)\\|sql\\)\\'" . plsql-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.tcl$" . tcl-mode) auto-mode-alist))
 
 ;; other modes
 ;(setq auto-mode-alist (cons '("\\.js$" . javascript-mode) auto-mode-alist))
@@ -110,6 +108,8 @@
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (autoload 'brightscript-mode "brightscript-mode" t)
 (setq auto-mode-alist (cons '("\\.brs$" . brightscript-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.tcl$" . tcl-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\sql$" . plsql-mode) auto-mode-alist))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MISC
