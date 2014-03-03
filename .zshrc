@@ -24,6 +24,8 @@ plugins=(git gitfast zsh-syntax-hightlighting)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zprofile
+# why source this separately?
+source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Customize to your needs...
 ###################################
