@@ -85,6 +85,9 @@ setopt NO_cdable_vars
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
+if [ -f ~/.zsh_work_aliases ]; then
+    . ~/.zsh_work_aliases
+fi
 
 ###################################
 # RVM STUFF
