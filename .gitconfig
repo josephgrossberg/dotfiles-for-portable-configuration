@@ -29,7 +29,9 @@
   st = status
   ci = commit
   co = checkout
+  lo = log --oneline --abbrev-commit --abbrev=4 -25
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  sb = status -sb
 [user]
   name = Joe Grossberg
   email = josephgrossberg+github@gmail.com
