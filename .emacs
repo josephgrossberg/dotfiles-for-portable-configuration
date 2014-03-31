@@ -26,7 +26,7 @@
 (powerline-default)
 
 (package-initialize)
-; others needed? smex, git-gutter, magit, feature-mode
+; others needed? smex, git-gutter, magit, feature-mode, ag
 ; via M-x package-install RET magit RET
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
@@ -44,6 +44,9 @@
 (global-git-gutter-mode t)
 
 (require 'magit)
+
+(require 'ag)
+(setq ag-highlight-search t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; APPEARANCE
