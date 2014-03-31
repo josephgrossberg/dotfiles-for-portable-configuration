@@ -26,7 +26,7 @@
 (powerline-default)
 
 (package-initialize)
-; others needed? smex, git-gutter, magit
+; others needed? smex, git-gutter, magit, feature-mode
 ; via M-x package-install RET magit RET
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
@@ -87,6 +87,7 @@
 (setq auto-mode-alist (cons '("\\.rb$" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("Rakefile" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("Capfile" . ruby-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("Gemfile" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rake$" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.irbrc$" . ruby-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.rhtml$" . html-mode) auto-mode-alist))
@@ -96,6 +97,7 @@
 (setq auto-mode-alist (cons '("\\.scss$" . css-mode) auto-mode-alist))
 (autoload 'haml-mode "haml-mode" t)
 (setq auto-mode-alist (cons '("\\.haml$" . haml-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.feature$" . feature-mode) auto-mode-alist))
 
 ;; other modes
 ;(setq auto-mode-alist (cons '("\\.js$" . javascript-mode) auto-mode-alist))
