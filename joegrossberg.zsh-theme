@@ -18,7 +18,7 @@ prompt_mail_count() {
 }
 
 # todo: invert colors for first part and second part
-PROMPT='%{$ZSH_THEME_MAIL_PROMPT_UNREAD%} %{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}
+PROMPT='%{$FG[162]%}%{$(prompt_mail_count)%}${%$reset_color%} %{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}
 %{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}%{$PROMPT_PROMPT%}»%{$reset_color%} '
 
 #RPS1="${return_code}"
@@ -28,7 +28,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$GIT_PROMPT_INFO%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$GIT_DIRTY_COLOR%}揦鮓"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$GIT_CLEAN_COLOR%}✔"
 
-ZSH_THEME_MAIL_PROMPT_UNREAD="%{$FG[162]$(prompt_mail_count)$reset_color%}"
+ZSH_THEME_MAIL_PROMPT_UNREAD="%{$FG[162]%}%{$(prompt_mail_count)%}${%$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_ADDED="%{$FG[082]%}✚%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$FG[166]%}Δ%{$reset_color%}"
