@@ -77,10 +77,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; erlang
 ;; TODO: work around hard-coded, version specific paths
-(setq load-path (cons  "/usr/local/Cellar/erlang/R16B03-1/lib/erlang/lib/tools-2.6.13/emacs"
+(setq load-path (cons  "~/erlang/lib/tools-2.6.13/emacs"
       load-path))
-      (setq erlang-root-dir "/usr/local/Cellar/erlang/R16B03-1/lib/erlang")
-      (setq exec-path (cons "/usr/local/Cellar/erlang/R16B03-1/lib/erlang/bin" exec-path))
+      (setq erlang-root-dir "~/erlang")
+      (setq exec-path (cons "~/erlang/bin" exec-path))
       (require 'erlang-start)
 ;; see: http://bob.ippoli.to/archives/2007/03/14/erlang-mode-for-emacs/
 ;(defvar inferior-erlang-prompt-timeout t)
