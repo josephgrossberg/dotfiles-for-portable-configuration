@@ -17,15 +17,8 @@ prompt_mail_count() {
   osascript ~/bin/mail_count.scpt
 }
 
-rdio_song() {
-  # set by crontab:
-  # ruby ~/dotfiles-for-portable-configuration/bin/rdio_check.rb /tmp/rdio.log
-  cat /tmp/rdio.log
-}
-
 # todo: invert colors for first part and second part
-PROMPT='%{$FG[236]%}%{$(rdio_song)%}${%$reset_color%}
-%{$FG[162]%}%{$(prompt_mail_count)%}${%$reset_color%} %{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}
+PROMPT='%{$FG[162]%}%{$(prompt_mail_count)%}${%$reset_color%} %{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}
 %{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}%{$PROMPT_PROMPT%}»%{$reset_color%} '
 
 #RPS1="${return_code}"
