@@ -114,6 +114,8 @@
 (autoload 'brightscript-mode "brightscript-mode" t)
 (setq auto-mode-alist (cons '("\\.brs$" . brightscript-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.tcl$" . tcl-mode) auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.vuh" . tcl-mode))
+(add-to-list 'auto-mode-alist '("\\.adp" . html-mode))
 (setq auto-mode-alist (cons '("\\sql$" . plsql-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\zsh" . shell-script-mode) auto-mode-alist))
 
