@@ -1,43 +1,43 @@
+[alias]
+  ci = commit
+  co = checkout
+  di = diff
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lo = log --oneline --abbrev-commit --abbrev=4 -25
+  sb = status -sb
+  st = status
+[apply]
+  whitespace = nowarn
 [core]
-  repositoryformatversion = 0
-  filemode = true
   bare = false
+  editor = emacs -q -l ~/git-init-file.el
+  filemode = true
+  ignorecase = false
   logallrefupdates = true
   pager = cat
-  editor = emacs -q -l ~/git-init-file.el
-  ignorecase = false
+  repositoryformatversion = 0
 [color]
-  diff = auto
-  status = auto
   branch = auto
+  diff = auto
   interactive = auto
+  status = auto
 [color "branch"]
   current = yellow reverse
   local = yellow
   remote = green
 [color "diff"]
-  meta = yellow bold
   frag = magenta bold
-  old = red bold
+  meta = yellow bold
   new = green bold
+  old = red bold
 [color "status"]
   added = yellow
   changed = green
   untracked = cyan
-[alias]
-  di = diff
-  st = status
-  ci = commit
-  co = checkout
-  lo = log --oneline --abbrev-commit --abbrev=4 -25
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-  sb = status -sb
+[pull]
+  rebase = true
+[push]
+  default = current
 [user]
   name = Joe Grossberg
   email = josephgrossberg+github@gmail.com
-[apply]
-  whitespace = nowarn
-[push]
-  default = current
-[pull]
-  rebase = true
