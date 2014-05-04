@@ -2,6 +2,7 @@
 
 (setq additional-paths '("~/.emacs.d" "~/lisp"))
 (setq load-path (append additional-paths load-path))
+(push "/usr/local/bin" exec-path)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; APPEARANCE
@@ -15,9 +16,12 @@
 (setq blink-matching-paren nil)
 (menu-bar-mode -1)
 
+;; avoid creating the ...~ files
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+
 ;; tab = two spaces
 (setq default-tab-width 2)
-(setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 (setq css-indent-offset 2)
 (setq-default js-indent-level 2)
@@ -167,9 +171,6 @@
 ;; usability
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq completion-ignore-case t)
-
-;; avoid creating the ...~ files
-(setq make-backup-files nil)
 
 ;; methods I forget the name of
 ; find-grep-dired
