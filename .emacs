@@ -76,12 +76,12 @@
 ;; MODE STUFF
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; erlang
-;; TODO: work around hard-coded, version specific paths
-(setq load-path (cons  "~/erlang/lib/tools-2.6.13/emacs"
-      load-path))
-      (setq erlang-root-dir "~/erlang")
-      (setq exec-path (cons "~/erlang/bin" exec-path))
-      (require 'erlang-start)
+;; TODO: more elegant solution to symlinks / version-specific
+(setq load-path (cons  "~/erlang_install/lib/erlang/lib/tools-2.6.13/emacs"
+                       load-path))
+(setq erlang-root-dir "~/erlang_install/lib/erlang")
+(setq exec-path (cons "~/erlang_install/lib/erlang/bin" exec-path))
+(require 'erlang-start)
 ;; see: http://bob.ippoli.to/archives/2007/03/14/erlang-mode-for-emacs/
 ;(defvar inferior-erlang-prompt-timeout t)
 
