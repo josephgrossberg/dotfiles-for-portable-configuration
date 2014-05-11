@@ -7,7 +7,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; APPEARANCE
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq inhibit-startup-message t)
+(setq inhibit-startup-message t
+      inhibit-startup-echo-area-message t)
 (setq visible-bell t)
 (setq require-final-newline t)
 (setq resize-minibuffer-frame t)
@@ -170,6 +171,7 @@
 
 ;; usability
 (defalias 'yes-or-no-p 'y-or-n-p)
+(setq confirm-nonexistent-file-or-buffer nil)
 (setq completion-ignore-case t)
 
 ;; methods I forget the name of
