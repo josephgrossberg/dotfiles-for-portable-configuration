@@ -49,8 +49,9 @@ MANPATH=$MANPATH:/usr/X11R6/man
 GREP_OPTIONS='--color=auto'
 GREP_COLOR='1;33'
 LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
-# z
-. ~/bin/z/z.sh
+
+# z for jumping around directories
+. ~/bin/z.sh
 
 ###################################
 # HISTORY
