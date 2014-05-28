@@ -63,7 +63,7 @@
 (set-face-foreground 'mode-line "#000")
 (if (facep 'isearch-fail) (set-face-background 'isearch-fail "#600") )
 (if (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path "~/.emacs.d/themes"))
-;; TODO: tweak colors to be like: http://cl.ly/image/0P0A3k1n0V35
+;; TODO: tweak colors to be like: http://cl.ly/image/0P0A3k1n0V35 or https://gorails.com/guides/using-vagrant-for-rails-development?utm_source=rubyweekly&utm_medium=email or shell -- green strings, not yellow; change outermost modeline colors
 (load-theme 'molokai t)
 (setq initial-scratch-message "; hello, world\n")
 
