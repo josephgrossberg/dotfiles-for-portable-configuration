@@ -14,7 +14,10 @@ GIT_CLEAN_COLOR=$FG[022]
 GIT_PROMPT_INFO=$FG[012]
 
 prompt_mail_count() {
-  osascript ~/bin/mail_count.scpt
+  MAIL_COUNT_PATH="~/bin/mail_count.scpt"
+  if [ -f $MAIL_COUNT_PATH ]; then
+    osascript $MAIL_COUNT_PATH
+  fi
 }
 
 # todo: invert colors for first part and second part
