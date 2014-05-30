@@ -1,14 +1,15 @@
-(defvar *emacs-load-start* (car (last (current-time))))
+(defvar *emacs-load-start* (car (last (current-time)))) ; for startup
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PATHS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq additional-paths '("~/.emacs.d" "~/lisp"))
 (setq load-path (append additional-paths load-path))
 (push "/usr/local/bin" exec-path)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; APPEARANCE
+;; USER INTERFACE
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq inhibit-startup-message t
-      inhibit-startup-echo-area-message t)
 (setq visible-bell t)
 (setq require-final-newline t)
 (setq resize-minibuffer-frame t)
@@ -16,7 +17,18 @@
 (setq next-line-add-newlines nil)
 (setq blink-matching-paren nil)
 (menu-bar-mode -1)
-(setq initial-scratch-message "; hello, world\n")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; KEY BINDINGS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq suggest-key-bindings t)
+(global-set-key [delete] 'delete-char)
+(global-set-key [kp-delete] 'delete-char)
+(global-set-key "\C-h" 'backward-delete-char)
+(global-set-key "\C-x\ ?" 'help)
+(global-set-key "\C-c\ l" 'goto-line)
+(global-set-key "\C-x\ f" 'find-file-other-window)
+(global-set-key "\C-z" nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; THEME
@@ -24,20 +36,6 @@
 ;; TODO: tweak colors to be like: http://cl.ly/image/0P0A3k1n0V35 or https://gorails.com/guides/using-vagrant-for-rails-development?utm_source=rubyweekly&utm_medium=email or shell -- green strings, not yellow; change outermost modeline colors
 (if (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path "~/.emacs.d/themes"))
 (load-theme 'molokai t)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; MISC
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; avoid creating the ...~ files
-(setq make-backup-files nil)
-(setq auto-save-default nil)
-
-;; tab = two spaces
-(setq default-tab-width 2)
-(setq-default indent-tabs-mode nil)
-(setq css-indent-offset 2)
-(setq-default js-indent-level 2)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PACKAGES
@@ -75,18 +73,6 @@
 
 (require 'ag)
 (setq ag-highlight-search t)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; KEYS
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq suggest-key-bindings t)
-(global-set-key [delete] 'delete-char)
-(global-set-key [kp-delete] 'delete-char)
-(global-set-key "\C-h" 'backward-delete-char)
-(global-set-key "\C-x\ ?" 'help)
-(global-set-key "\C-c\ l" 'goto-line)
-(global-set-key "\C-x\ f" 'find-file-other-window)
-(global-set-key "\C-z" nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MODE STUFF
@@ -139,6 +125,16 @@
 ;; MISC
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; avoid creating the ...~ files
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+
+;; tab = two spaces
+(setq default-tab-width 2)
+(setq-default indent-tabs-mode nil)
+(setq css-indent-offset 2)
+(setq-default js-indent-level 2)
+
 ;; translates ANSI colors into text-properties, for eshell
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
@@ -190,5 +186,11 @@
 ; find-name-dired
 ; grep-find
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; STARTUP MESSAGE
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq inhibit-startup-message t
+      inhibit-startup-echo-area-message t)
+(setq initial-scratch-message "; hello, world\n")
 (message "My .emacs loaded in %s seconds" (/ (- (car (last (current-time))) *emacs-load-start*) 100000.0))
 (recentf-open-files)
