@@ -39,6 +39,13 @@
              '("technomancy" . "http://repo.technomancy.us/emacs/") t)
 (add-to-list 'package-archives
              '("elpa" . "http://tromey.com/elpa/") t)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
+;; to start emacs web server:
+;(require 'simple-httpd)
+;(setq httpd-root "/var/www")
+;(httpd-start)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
