@@ -16,6 +16,18 @@
 (setq next-line-add-newlines nil)
 (setq blink-matching-paren nil)
 (menu-bar-mode -1)
+(setq initial-scratch-message "; hello, world\n")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; THEME
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; TODO: tweak colors to be like: http://cl.ly/image/0P0A3k1n0V35 or https://gorails.com/guides/using-vagrant-for-rails-development?utm_source=rubyweekly&utm_medium=email or shell -- green strings, not yellow; change outermost modeline colors
+(if (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path "~/.emacs.d/themes"))
+(load-theme 'molokai t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; MISC
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; avoid creating the ...~ files
 (setq make-backup-files nil)
@@ -26,6 +38,10 @@
 (setq-default indent-tabs-mode nil)
 (setq css-indent-offset 2)
 (setq-default js-indent-level 2)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGES
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'powerline)
 (powerline-default)
@@ -59,20 +75,6 @@
 
 (require 'ag)
 (setq ag-highlight-search t)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; APPEARANCE
-;; TODO: combine w above "APPEARANCE"?
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;(load-theme 'manoj-dark t)
-(set-face-background 'default "#000")
-(set-face-background 'region "#333")
-(set-face-foreground 'mode-line "#000")
-(if (facep 'isearch-fail) (set-face-background 'isearch-fail "#600") )
-(if (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path "~/.emacs.d/themes"))
-;; TODO: tweak colors to be like: http://cl.ly/image/0P0A3k1n0V35 or https://gorails.com/guides/using-vagrant-for-rails-development?utm_source=rubyweekly&utm_medium=email or shell -- green strings, not yellow; change outermost modeline colors
-(load-theme 'molokai t)
-(setq initial-scratch-message "; hello, world\n")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; KEYS
