@@ -14,7 +14,7 @@
        'molokai
 
        ;; basic coloring
-       '(default ((t (:foreground "#F8F8F2" :background "#1B1D1E"))))
+       '(default ((t (:foreground "#F8F8F2" :background "#000000"))))
        '(cursor ((t (:background "#F8F8F0" :foreground nil))))
        '(bold ((t (:weight bold))))
        '(bold-italic ((t (:weight bold :slant italic))))
