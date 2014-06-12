@@ -33,14 +33,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; THEME
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; TODO: tweak colors to be like: http://cl.ly/image/0P0A3k1n0V35 or https://gorails.com/guides/using-vagrant-for-rails-development?utm_source=rubyweekly&utm_medium=email or shell -- green strings, not yellow; change outermost modeline colors
 (if (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path "~/.emacs.d/themes"))
 (load-theme 'molokai t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PACKAGES
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 (require 'powerline)
 (powerline-default)
 
@@ -104,21 +102,17 @@
 (setq auto-mode-alist (cons '("\\.haml$" . haml-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.feature$" . feature-mode) auto-mode-alist))
 
-;; other modes
+;; js
 ;(setq auto-mode-alist (cons '("\\.js$" . javascript-mode) auto-mode-alist))
 (autoload 'js2-mode "js2" nil t)
 (setq js2-cleanup-whitespace nil)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.har$" . js2-mode))
+
+;; other modes
 (autoload 'yaml-mode "yaml-mode" t)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-(autoload 'brightscript-mode "brightscript-mode" t)
-(setq auto-mode-alist (cons '("\\.brs$" . brightscript-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.tcl$" . tcl-mode) auto-mode-alist))
-(add-to-list 'auto-mode-alist '("\\.vuh" . tcl-mode))
-(add-to-list 'auto-mode-alist '("\\.adp" . html-mode))
-(setq auto-mode-alist (cons '("\\sql$" . plsql-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\zsh" . shell-script-mode) auto-mode-alist))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
