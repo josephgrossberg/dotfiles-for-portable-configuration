@@ -81,7 +81,7 @@
                        load-path))
 (setq erlang-root-dir "~/erlang_install/lib/erlang")
 (setq exec-path (cons "~/erlang_install/lib/erlang/bin" exec-path))
-(require 'erlang-start)
+(if (featurep 'erlang-start) (require 'erlang-start))
 ;; see: http://bob.ippoli.to/archives/2007/03/14/erlang-mode-for-emacs/
 ;(defvar inferior-erlang-prompt-timeout t)
 
