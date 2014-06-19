@@ -93,7 +93,6 @@ fi
 ###################################
 # RBENV STUFF
 ###################################
-PATH=$HOME/.rbenv/bin:$PATH # Add rbenv to PATH for scripting
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 ###################################
