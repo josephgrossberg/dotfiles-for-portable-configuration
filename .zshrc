@@ -91,10 +91,10 @@ if [ -f ~/.zsh_work_aliases ]; then
 fi
 
 ###################################
-# RVM STUFF
+# RBENV STUFF
 ###################################
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$HOME/.rbenv/bin:$PATH # Add rbenv to PATH for scripting
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 ###################################
 # NOTES ON SHELL STUFF
