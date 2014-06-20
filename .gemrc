@@ -5,8 +5,6 @@ gem: --no-rdoc --no-ri
 :bulk_threshold: 1000
 :verbose: true
 :sources: 
-- http://gemcutter.org
 - http://rubygems.org
-- http://gems.engineyard.com
 - http://gems.github.com
 :backtrace: false
