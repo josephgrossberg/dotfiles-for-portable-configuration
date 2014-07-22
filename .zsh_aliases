@@ -34,6 +34,11 @@ function mcd() {
   mkdir -p "$1" && cd "$1";
 }
 
+# Quickly find process info matching a string
+function psgrep() {
+  ps axu | grep -v grep | grep "$@" -i --color=auto;
+}
+
 # Complete g like git
 compdef g=git
 
