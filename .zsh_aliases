@@ -9,6 +9,7 @@ alias emacs=$EMACS
 alias e=$EMACS
 alias eamcs=$EMACS
 alias fn='find . -name'
+alias gh='ghwd'
 alias guid='mysql -u root -e"select uuid();"'
 alias ls='ls -bG'
 alias la='ls -abG'
