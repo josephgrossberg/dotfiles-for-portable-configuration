@@ -1,6 +1,7 @@
 alias a='ack'
 alias bc='bc -l'
 alias be='bundle exec'
+alias bx='bundle exec'
 alias chomp="tr -d '\n'"
 alias cpan='perl -MCPAN -e shell'
 alias ducks='du -cks * |sort -rn |head -11'
@@ -20,7 +21,6 @@ alias mkdir='mkdir -p'
 alias more='more -r'
 alias now='ruby -e "puts Time.now.utc.to_i"'
 alias rlc='rake log:clear'
-alias tgz='tar -pczf'
 alias uuid='python -c "import uuid; print uuid.uuid4()"'
 
 # function to avoid spambots scraping the email address
@@ -57,4 +57,8 @@ function ffind() {
 }
 function pbcat() {
     cat ${1} | pbcopy
+}
+
+function tgz() {
+    tar -pcz ${1} > ${1}.tgz
 }
