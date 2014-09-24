@@ -11,10 +11,10 @@
 ;; USER INTERFACE
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq visible-bell t)
+(setq next-line-add-newlines nil)
 (setq require-final-newline t)
 (setq resize-minibuffer-frame t)
 (setq-default transient-mark-mode t)
-(setq next-line-add-newlines nil)
 (setq blink-matching-paren nil)
 (menu-bar-mode -1)
 
