@@ -109,6 +109,7 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.har$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 
 ;; other modes
 (autoload 'yaml-mode "yaml-mode" t)
