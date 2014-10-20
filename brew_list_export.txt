@@ -27,4 +27,3 @@ s-lang
 the_silver_searcher
 wget
 xz
-zsh
