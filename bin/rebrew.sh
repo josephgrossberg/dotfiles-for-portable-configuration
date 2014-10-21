@@ -1,3 +1,10 @@
+echo "################################";
+echo "Trying to make brew and Yosemite play nice ...";
+echo "";
+echo "More debugging info: https://github.com/Homebrew/homebrew/wiki/troubleshooting";
+echo "################################";
+
+
 echo "brew prune";
 brew prune;
 echo "brew cleanup";
