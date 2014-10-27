@@ -39,9 +39,9 @@ promptinit # prompt customization
 # ENVIRONMENT VARS
 ###################################
 #PATH=~/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
-PATH=~/bin:$PATH
-PATH=/usr/local/bin:$PATH
-PATH=/usr/local/sbin:$PATH
+PATH=$PATH:~/bin
+PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/local/sbin
 #PATH=/usr/local/git/bin:$PATH
 
 EDITOR=emacs
