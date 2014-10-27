@@ -3,7 +3,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PATHS
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq additional-paths '("~/.emacs.d" "~/lisp"))
+(setq additional-paths '("~/.emacs.d/lisp" "~/lisp"))
 (setq load-path (append additional-paths load-path))
 (push "/usr/local/bin" exec-path)
 
@@ -67,7 +67,7 @@
 (require 'git-gutter)
 (global-git-gutter-mode t)
 
-(require 'magit)
+;(require 'magit)
 
 (require 'ag)
 (setq ag-highlight-search t)

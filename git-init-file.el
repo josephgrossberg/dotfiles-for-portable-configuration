@@ -1,6 +1,6 @@
 (defvar *emacs-load-start* (car (last (current-time))))
 
-(setq additional-paths '("~/.emacs.d" "~/lisp"))
+(setq additional-paths '("~/.emacs.d/lisp" "~/lisp"))
 (setq load-path (append additional-paths load-path))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
