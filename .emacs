@@ -42,17 +42,20 @@
 (require 'powerline)
 (powerline-default)
 
+(require 'package) ;; You might already have this line
+(add-to-list 'package-archives
+	     '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
-; others needed? smex, git-gutter, magit, feature-mode, ag
+; others needed? smex, git-gutter, magit, feature-mode, ag, elixir-mode
 ; via M-x package-install RET magit RET
+;; (add-to-list 'package-archives
+;;              '("marmalade" . "http://marmalade-repo.org/packages/") t)
+;; (add-to-list 'package-archives
+;;              '("technomancy" . "http://repo.technomancy.us/emacs/") t)
+;; (add-to-list 'package-archives
+;;              '("elpa" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/") t)
-(add-to-list 'package-archives
-             '("technomancy" . "http://repo.technomancy.us/emacs/") t)
-(add-to-list 'package-archives
-             '("elpa" . "http://tromey.com/elpa/") t)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 
 ;; to start emacs web server:
 ;(require 'simple-httpd)
@@ -110,6 +113,10 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.har$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+
+;; elixir
+(require 'elixir-mode)
+(add-to-list 'auto-mode-alist '("\\.elixir2\\'" . elixir-mode))
 
 ;; other modes
 (autoload 'yaml-mode "yaml-mode" t)
