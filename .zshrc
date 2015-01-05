@@ -77,6 +77,9 @@ WORDCHARS=${WORDCHARS//\//}
 # From https://github.com/robbyrussell/oh-my-zsh/issues/238
 setopt NO_cdable_vars
 
+# Allow comments on command line: http://stackoverflow.com/a/11873793
+setopt interactivecomments
+
 ###################################
 # PROMPT
 ###################################
