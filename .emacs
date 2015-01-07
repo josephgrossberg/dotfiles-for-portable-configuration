@@ -33,7 +33,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; THEME
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(if (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path "~/.emacs.d/themes"))
+(if (boundp 'custom-theme-load-path)
+    (add-to-list 'custom-theme-load-path "~/.emacs.d/themes"))
 (load-theme 'molokai t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -195,5 +196,6 @@
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t)
 (setq initial-scratch-message "; hello, world\n")
-(message "My .emacs loaded in %s seconds" (/ (- (car (last (current-time))) *emacs-load-start*) 100000.0))
+(message "My .emacs loaded in %s seconds"
+         (/ (- (car (last (current-time))) *emacs-load-start*) 100000.0))
 (recentf-open-files)
