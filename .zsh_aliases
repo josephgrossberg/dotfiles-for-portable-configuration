@@ -47,8 +47,7 @@ function gitbranch {
   git checkout -b "$1";
   git push -u origin "$1";
 }
-#alias gitlg='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen%cn%Creset %Cblue%cr%Creset'\'' --abbrev-commit --date=relative'
-alias gitlog="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gitlog="git lg"
 
 # Found here: https://github.com/mattsacks/dotfiles/blob/master/zshrc
 function ffind() {
