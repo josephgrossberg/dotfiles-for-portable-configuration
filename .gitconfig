@@ -2,7 +2,8 @@
   ci = commit
   co = checkout
   di = diff
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset \
+       %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   lo = log --oneline --abbrev-commit --abbrev=4 -25
   sb = status -sb
   st = status
