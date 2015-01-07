@@ -133,4 +133,5 @@
 (require 'git-commit)
 (git-commit-mode)
 
-(message "My .emacs loaded in %s seconds" (/ (- (car (last (current-time))) *emacs-load-start*) 100000.0))
+(message "My .emacs loaded in %s seconds"
+         (/ (- (car (last (current-time))) *emacs-load-start*) 100000.0))
