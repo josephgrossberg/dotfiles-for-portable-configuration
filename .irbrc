@@ -1,7 +1,7 @@
 ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 
 require 'rubygems'
-#require 'utility_belt'
+require 'awesome_print'
 require 'irb/completion'
 require 'irb/ext/save-history'
 
