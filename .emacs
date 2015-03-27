@@ -110,6 +110,7 @@
 ;(setq auto-mode-alist (cons '("\\.js$" . javascript-mode) auto-mode-alist))
 (autoload 'js2-mode "js2-mode" nil t)
 (setq js2-cleanup-whitespace nil)
+(setq js2-highlight-level 3)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.har$" . js2-mode))
