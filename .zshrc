@@ -98,7 +98,9 @@ fi
 ###################################
 # RBENV STUFF
 ###################################
-# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+eval "$(rbenv init - zsh)"
+PATH=$PATH:~/.rbenv/shims
+PATH=$PATH:~/.rbenv/bin
 
 ###################################
 # NOTES ON SHELL STUFF
