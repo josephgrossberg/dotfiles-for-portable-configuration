@@ -14,10 +14,14 @@ alias :x :exit
 alias :q :exit
 alias :quit :exit
 
-def ri arg
+def ri(arg)
   puts `ri #{arg}`
 end
 
-def cheat arg
+def cheat(arg)
   puts `cheat #{arg}`
+end
+
+def sql(arg)
+  puts arg.to_sql.pretty_format_sql
 end
