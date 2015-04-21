@@ -47,8 +47,8 @@
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
-; others needed? smex, git-gutter, magit, feature-mode, ag, elixir-mode
-; via M-x package-install RET magit RET
+;; others needed? smex, git-gutter, ag
+;; via M-x package-install RET ag RET
 ;; (add-to-list 'package-archives
 ;;              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 ;; (add-to-list 'package-archives
