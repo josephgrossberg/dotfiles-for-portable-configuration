@@ -3,6 +3,7 @@ automake
 emacs
 freetype
 gdbm
+ghwd
 git
 git-extras
 git-flow
