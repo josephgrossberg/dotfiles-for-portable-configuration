@@ -6,6 +6,9 @@
   lo = log --oneline --abbrev-commit --abbrev=4 -25
   sb = status -sb
   st = status
+  ignore = update-index —assume-unchanged
+  unignore = update-index —no-assume-unchanged
+  ignored = !git ls-files -v | grep ^[a-z]
 [apply]
   whitespace = nowarn
 [core]
