@@ -43,6 +43,7 @@ PATH=$PATH:~/bin
 PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/local/sbin
 #PATH=/usr/local/git/bin:$PATH
+PATH=$PATH:~/xiki-master/bin/
 
 EDITOR=emacs
 VISUAL=emacs
