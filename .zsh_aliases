@@ -20,6 +20,7 @@ alias mkdir='mkdir -p'
 alias more='more -r'
 alias now='ruby -e "puts Time.now.utc.to_i"'
 alias rlc='rake log:clear'
+alias srspec='bundle exec spring rspec'
 alias uuid='python -c "import uuid; print uuid.uuid4()"'
 
 # function to avoid spambots scraping the email address
