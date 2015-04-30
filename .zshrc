@@ -47,7 +47,7 @@ PATH=$PATH:~/xiki-master/bin/
 
 EDITOR=emacs
 VISUAL=emacs
-PAGER=most
+PAGER=cat
 MANPATH=$MANPATH:/usr/X11R6/man
 GREP_OPTIONS='--color=auto'
 GREP_COLOR='1;33'
