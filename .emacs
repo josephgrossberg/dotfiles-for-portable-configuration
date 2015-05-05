@@ -127,6 +127,28 @@
 (setq auto-mode-alist (cons '("\\zsh" . shell-script-mode) auto-mode-alist))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; HTML HEX COLORING
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun syntax-color-hex ()
+  "Syntax color hex color spec such as 「#ff1100」 in current buffer."
+  (interactive)
+  (font-lock-add-keywords
+   nil
+   '(("#[abcdef[:digit:]]\\{3,6\\}"
+      (0 (put-text-property
+          (match-beginning 0)
+          (match-end 0)
+          'face (list :background (match-string-no-properties 0)))))))
+  (font-lock-fontify-buffer)
+  )
+(add-hook 'coffee-mode-hook 'syntax-color-hex)
+(add-hook 'css-mode-hook 'syntax-color-hex)
+(add-hook 'js2-mode-hook 'syntax-color-hex)
+(add-hook 'html-mode-hook 'syntax-color-hex)
+(add-hook 'haml-mode-hook 'syntax-color-hex)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MISC
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
