@@ -124,6 +124,7 @@
 ;; other modes
 (autoload 'yaml-mode "yaml-mode" t)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 (setq auto-mode-alist (cons '("\\zsh" . shell-script-mode) auto-mode-alist))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
