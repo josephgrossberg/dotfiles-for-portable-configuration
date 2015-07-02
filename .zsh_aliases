@@ -48,6 +48,9 @@ function gitbranch {
   git checkout -b "$1";
   git push -u origin "$1";
 }
+function git_delete_merged_branches {
+  git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
+}
 alias gitlog="git lg"
 
 # Found here: https://github.com/mattsacks/dotfiles/blob/master/zshrc
