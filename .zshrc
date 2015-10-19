@@ -1,10 +1,10 @@
-ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh configuration.
+export ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh configuration.
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="joegrossberg"
+export ZSH_THEME="joegrossberg"
 
 # Comment this out to disable bi-weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
@@ -15,7 +15,7 @@ ZSH_THEME="joegrossberg"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
+export COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -43,16 +43,16 @@ PATH=$PATH:~/bin
 PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/local/sbin
 #PATH=/usr/local/git/bin:$PATH
-PATH=$PATH:~/xiki-master/bin
+export PATH=$PATH:~/xiki-master/bin
 
-EDITOR=emacs
-VISUAL=emacs
-PAGER=most
-PSQL_PAGER=cat
-MANPATH=$MANPATH:/usr/X11R6/man
-GREP_OPTIONS='--color=auto'
-GREP_COLOR='1;33'
-LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
+export EDITOR=emacs
+export VISUAL=emacs
+export PAGER=cat
+export PSQL_PAGER=cat
+export MANPATH=$MANPATH:/usr/X11R6/man
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;33'
+export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
 
 # z for jumping around directories
 . ~/bin/z.sh
@@ -60,8 +60,8 @@ LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
 ###################################
 # HISTORY
 ###################################
-HISTFILE=~/.zsh_history
-HISTSIZE=SAVEHIST=10000
+export HISTFILE=~/.zsh_history
+export HISTSIZE=SAVEHIST=10000
 setopt incappendhistory 
 setopt sharehistory
 setopt extendedhistory
@@ -75,7 +75,7 @@ setopt extendedhistory
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # word boundaries dont cross slashes (expunge the '/' character from the list
 # of characters that are part of words)
-WORDCHARS=${WORDCHARS//\//}
+export WORDCHARS=${WORDCHARS//\//}
 # From https://github.com/robbyrussell/oh-my-zsh/issues/238
 setopt NO_cdable_vars
 
@@ -102,7 +102,7 @@ fi
 ###################################
 eval "$(rbenv init - zsh)"
 PATH=$PATH:~/.rbenv/shims
-PATH=$PATH:~/.rbenv/bin
+export PATH=$PATH:~/.rbenv/bin
 
 ###################################
 # NOTES ON SHELL STUFF
