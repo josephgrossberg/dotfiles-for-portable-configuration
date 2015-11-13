@@ -72,7 +72,7 @@
        '(lazy-highlight ((t (:foreground "#465457" :Background "#000000"))))
 
        ;; linum-mode
-       '(linum ((t (:foreground "#F8F8F2" :background "#1B1D1E"))))
+       '(linum ((t (:foreground "#333333" :background "#111111"))))
 
        ;; markdown-mode
        '(markdown-italic-face ((t (:slant italic))))
