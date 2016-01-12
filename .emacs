@@ -126,6 +126,8 @@
 (add-to-list 'auto-mode-alist '("\\.har$" . js2-mode))
 (autoload 'coffee-mode "coffee-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
+(autoload 'jsx-mode "jsx-mode" "JSX mode" t)
 
 ;; elixir
 (require 'elixir-mode)
