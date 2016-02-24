@@ -11,6 +11,7 @@ alias e=$EMACS
 alias eamcs=$EMACS
 alias fn='find . -name'
 alias gh='ghwd'
+alias glohead='glo | head'
 alias good_morning='hm && git co master && git pull && bundle install && be rake db:migrate && gst'
 alias guid='mysql -u root -e"select uuid();"'
 alias ls='ls -bG'

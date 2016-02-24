@@ -104,6 +104,14 @@ eval "$(rbenv init - zsh)"
 PATH=$PATH:~/.rbenv/shims
 export PATH=$PATH:~/.rbenv/bin
 
+
+###################################
+# NVM STUFF
+###################################
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh
+
 ###################################
 # NOTES ON SHELL STUFF
 ###################################
