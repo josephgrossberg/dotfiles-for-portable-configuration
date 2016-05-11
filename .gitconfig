@@ -1,16 +1,3 @@
-[alias]
-  ci = commit
-  co = checkout
-  di = diff
-  lg = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --reverse
-  lo = log --oneline --abbrev-commit --abbrev=4 -25
-  sb = status -sb
-  st = status
-  ignore = update-index —assume-unchanged
-  unignore = update-index —no-assume-unchanged
-  ignored = !git ls-files -v | grep ^[a-z]
-[apply]
-  whitespace = nowarn
 [core]
   bare = false
   editor = emacs -q -l ~/git-init-file.el
@@ -37,10 +24,26 @@
   added = yellow
   changed = green
   untracked = cyan
-[pull]
-  rebase = true
-[push]
-  default = current
+[alias]
+  ci = commit
+  co = checkout
+  di = diff
+  difflog = log -p
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  st = status
+
 [user]
   name = Joe Grossberg
   email = josephgrossberg+github@gmail.com
+[apply]
+  whitespace = nowarn
+[push]
+  default = current
+[pull]
+  rebase = true
+[github]
+  site = https://github.com
+  endpoint = https://api.github.com
+  oauth-token = SECRET
+[reflow]
+  git-server = GitHub
