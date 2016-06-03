@@ -131,6 +131,15 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 
 ###################################
+# RESUME EMACS WITH CTRL-Z
+###################################
+foreground-emacs() {
+    fg %emacs
+}
+zle -N foreground-emacs
+bindkey '^Z' foreground-emacs
+
+###################################
 # NOTES ON SHELL STUFF
 ###################################
 # &> to redirect STDOUT and STDERR
