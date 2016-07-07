@@ -21,7 +21,7 @@
        '(custom-face-tag ((t (:foreground "#66D9EF" :weight bold))))
        '(custom-state ((t (:foreground "#A6E22E"))))
        '(italic ((t (:slant italic))))
-       '(region ((t (:background "#403D3D"))))
+       '(region ((t (:background "#504D4D"))))
        '(underline ((t (:underline t))))
        '(css-selector ((t (:foreground "#F92672"))))
        '(css-property ((t (:foreground "#66D9EF"))))

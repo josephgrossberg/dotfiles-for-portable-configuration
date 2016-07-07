@@ -8,7 +8,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("87c08219e15dad573dc85010a5df1210da02e650e38260780b1f34c83e173468" default))))
+    ("dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
