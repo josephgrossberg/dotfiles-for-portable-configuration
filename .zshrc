@@ -38,12 +38,7 @@ promptinit # prompt customization
 ###################################
 # ENVIRONMENT VARS
 ###################################
-#PATH=~/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/usr/local/mysql/bin:$PATH
-PATH=$PATH:~/bin
-PATH=$PATH:/usr/local/bin
-PATH=$PATH:/usr/local/sbin
-#PATH=/usr/local/git/bin:$PATH
-export PATH=$PATH:~/xiki-master/bin
+export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 export EDITOR=emacs
 export VISUAL=emacs
@@ -114,7 +109,6 @@ fi
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 PATH=$PATH:~/.rbenv/shims
 export PATH=$PATH:~/.rbenv/bin
-
 
 ###################################
 # NVM STUFF

@@ -69,4 +69,4 @@ function pbcat() {
 function tgz() {
     tar -pcz ${1} > ${1}.tgz
 }
-alias hm="cd ~/playfig/website"
+alias hm="cd ~/real-server"
