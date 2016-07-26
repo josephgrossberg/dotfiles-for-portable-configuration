@@ -1,4 +1,5 @@
 alias a='ack'
+alias battery='pmset -g batt'
 alias bc='bc -l'
 alias be='bundle exec'
 alias bx='bundle exec'
