@@ -28,6 +28,7 @@ alias rlc='rake log:clear'
 alias screensaver='open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app'
 alias srspec='bundle exec spring rspec'
 alias ss='screensaver'
+alias timestamp='ruby -e "puts Time.now.strftime(\"%FT%T%:z\")"'
 alias uuid='python -c "import uuid; print uuid.uuid4()"'
 alias weather='curl http://wttr.in/sf'
 
