@@ -21,7 +21,7 @@ prompt_mail_count() {
 }
 
 # todo: invert colors for first part and second part
-PROMPT='%{$FG[162]%}%{$(prompt_mail_count)%}${%$reset_color%}%{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}
+PROMPT='%{$FG[162]%}${%$reset_color%}%{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}
 %{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}%{$PROMPT_PROMPT%}»%{$reset_color%} '
 
 #RPS1="${return_code}"
