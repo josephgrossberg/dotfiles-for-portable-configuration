@@ -26,6 +26,7 @@
   untracked = cyan
 [alias]
   ci = commit
+  commend = commit --amend --no-edit
   co = checkout
   di = diff
   difflog = log -p
