@@ -111,6 +111,12 @@ PATH=$PATH:~/.rbenv/shims
 export PATH=$PATH:~/.rbenv/bin
 
 ###################################
+# GO STUFF
+###################################
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
+
+###################################
 # NVM STUFF
 ###################################
 export NVM_DIR=~/.nvm
