@@ -26,12 +26,12 @@ PROMPT='${%$reset_color%}%{$PROMPT_PROMPT%}${%$reset_color%}[%D{%I:%M:%S}] %{$PR
 
 #RPS1="${return_code}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX=""
+ZSH_THEME_GIT_PROMPT_PREFIX="⌥  "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$GIT_PROMPT_INFO%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$GIT_DIRTY_COLOR%}揦鮓"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$GIT_CLEAN_COLOR%}✔"
 
-ZSH_THEME_MAIL_PROMPT_UNREAD="%{$FG[162]%}%{$(prompt_mail_count)%}${%$reset_color%}"
+#ZSH_THEME_MAIL_PROMPT_UNREAD="%{$FG[162]%}%{$(prompt_mail_count)%}${%$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_ADDED="%{$FG[154]%}✚%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$FG[166]%}Δ%{$reset_color%}"
