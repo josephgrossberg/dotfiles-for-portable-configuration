@@ -20,7 +20,6 @@ alias guid='mysql -u root -e"select uuid();"'
 alias ls='ls -bG'
 alias la='ls -abG'
 alias ll='ls -abGl'
-alias lt='ls -ltr'
 alias mkdir='mkdir -p'
 alias more='more -r'
 alias now='ruby -e "puts Time.now.utc.to_i"'
@@ -74,3 +73,7 @@ function tgz() {
     tar -pcz ${1} > ${1}.tgz
 }
 alias hm="cd ~/real-server"
+export RACK_TIMEOUT_SERVICE_TIMEOUT=50000
+export CURRENCY_SERVICE_URL=http://localhost:4000
+export V1_BASE_URL=http://localhost:3001
+
