@@ -43,8 +43,8 @@
 [pull]
   rebase = true
 [github]
-  site = https://github.com
-  endpoint = https://api.github.com
+	site = https://github.com
+	endpoint = https://api.github.com
   oauth-token = SECRET
 [reflow]
-  git-server = GitHub
+	git-server = GitHub
