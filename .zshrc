@@ -51,6 +51,14 @@ export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CH
 . ~/bin/z.sh
 
 ###################################
+# RBENV
+###################################
+export PATH=$HOME/.rbenv/bin:$PATH
+if (which rbenv > /dev/null); then
+    eval "$(rbenv init -)"
+fi
+
+###################################
 # HISTORY
 ###################################
 export HISTFILE=~/.zsh_history
