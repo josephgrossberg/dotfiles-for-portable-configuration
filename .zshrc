@@ -20,12 +20,10 @@ export COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gitfast zsh-syntax-hightlighting)
+plugins=(git gitfast)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zprofile
-# why source this separately?
-source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Customize to your needs...
 ###################################
@@ -102,33 +100,6 @@ fi
 if [ -f ~/.zsh_work_aliases ]; then
     . ~/.zsh_work_aliases
 fi
-
-###################################
-# RBENV STUFF
-###################################
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-PATH=$PATH:~/.rbenv/shims
-export PATH=$PATH:~/.rbenv/bin
-
-###################################
-# GO STUFF
-###################################
-export GOPATH=~/go
-export PATH=$PATH:$GOPATH/bin
-
-###################################
-# NVM STUFF
-###################################
-export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
-
-autoload -U add-zsh-hook
-load-nvmrc() {
-    if [[ -f .nvmrc && -r .nvmrc ]]; then
-        nvm use
-    fi
-}
-add-zsh-hook chpwd load-nvmrc
 
 ###################################
 # RESUME EMACS WITH CTRL-Z
