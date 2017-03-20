@@ -32,10 +32,7 @@
   difflog = log -p
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   st = status
-
-[user]
-  name = Joe Grossberg
-  email = josephgrossberg+github@gmail.com
+	login = !sh /Users/joegrossberg/workspace/atas/login.sh
 [apply]
   whitespace = nowarn
 [push]
@@ -46,5 +43,21 @@
 	site = https://github.com
 	endpoint = https://api.github.com
   oauth-token = SECRET
+	username = josephgrossberg
 [reflow]
 	git-server = GitHub
+[gitflow "branch"]
+	validation = validation
+	develop = master
+	master = master
+[gitflow "prefix"]
+	feature = feature
+	hotfix = hotfix
+	release = release
+[user]
+[pivotal]
+	project-id = 1935477
+[user]
+	name = Joe Grossberg
+	email = josephgrossberg+github@gmail.com
+	initials = JG

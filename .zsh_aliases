@@ -19,6 +19,7 @@ alias ls='ls -bG'
 alias la='ls -abGh'
 alias ll='ls -labGh'
 alias mkdir='mkdir -p'
+alias mine='rubymine'
 alias more='more -r'
 alias now='ruby -e "puts Time.now.utc.to_i"'
 alias rlc='rake log:clear'
@@ -70,8 +71,7 @@ function pbcat() {
 function tgz() {
     tar -pcz ${1} > ${1}.tgz
 }
-alias hm="cd ~/real-server"
+alias hm="cd ~/workspace/atas-platform"
 export RACK_TIMEOUT_SERVICE_TIMEOUT=50000
 export CURRENCY_SERVICE_URL=http://localhost:4000
 export V1_BASE_URL=http://localhost:3001
-
