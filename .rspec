@@ -1,5 +1,4 @@
 --format doc
 --color
 --backtrace
---require spec_helper
 --order rand
