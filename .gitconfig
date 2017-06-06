@@ -55,7 +55,6 @@
 	feature = feature
 	hotfix = hotfix
 	release = release
-[user]
 [pivotal]
 	project-id = 1935477
 [user]
