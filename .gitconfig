@@ -31,8 +31,9 @@
   di = diff
   difflog = log -p
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  praise = blame
   st = status
-	login = !sh /Users/joegrossberg/workspace/atas/login.sh
+  login = !sh /Users/joegrossberg/workspace/atas/login.sh
 [apply]
   whitespace = nowarn
 [push]
