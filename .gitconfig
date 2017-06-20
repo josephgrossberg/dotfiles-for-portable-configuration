@@ -45,6 +45,7 @@
 	endpoint = https://api.github.com
   oauth-token = SECRET
 	username = josephgrossberg
+	api-token = 56da218df6cbef4caa986287a8a7861235ab437e
 [reflow]
 	git-server = GitHub
 [gitflow "branch"]
@@ -56,7 +57,11 @@
 	hotfix = hotfix
 	release = release
 [pivotal]
-	project-id = 1935477
+	# api-token = c71012ea9ac5fde3dd6f82dc91288af5
+	name = Joe Grossberg
+	email = josephgrossberg+github@gmail.com
+	initials = JG
+[user]
 [user]
 	name = Joe Grossberg
 	email = josephgrossberg+github@gmail.com
