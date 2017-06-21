@@ -72,12 +72,14 @@ function tgz() {
     tar -pcz ${1} > ${1}.tgz
 }
 alias hm="cd ~/workspace/atas-platform"
-export RACK_TIMEOUT_SERVICE_TIMEOUT=50000
-export CURRENCY_SERVICE_URL=http://localhost:4000
-export V1_BASE_URL=http://localhost:3001
 
 # Found here: https://github.com/sapegin/dotfiles/blob/master/zsh/aliases.zsh
 cdf() { cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"; }
 alias get="curl -O -L"
 alias gist-paste="gist --private --copy --paste --filename"  # gist-paste filename.ext -- create private Gist from the clipboard contents
 alias gist-file="gist --private --copy"  # gist-file filename.ext -- create private Gist from a file
+
+# Load Engineering
+export PATH="$PATH:$HOME/workspace/engineering/bin"
+source $HOME/workspace/engineering/bin/vineti_import_db.sh
+export ENGINEERING="$HOME/workspace/engineering"
