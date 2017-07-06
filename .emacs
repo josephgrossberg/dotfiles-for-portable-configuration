@@ -8,7 +8,10 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default))))
+    ("dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default)))
+ '(package-selected-packages
+   (quote
+    (melpa-upstream-visit helm smex powerline git-gutter ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -72,7 +75,7 @@
 
 (require 'package) ;; You might already have this line
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/") t)
+	     '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 ;; others needed? smex, git-gutter, ag
 ;; via M-x package-install RET ag RET
@@ -83,7 +86,7 @@
 ;; (add-to-list 'package-archives
 ;;              '("elpa" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
-             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 ;; to start emacs web server:
 ;(require 'simple-httpd)
@@ -104,6 +107,9 @@
 
 (require 'ag)
 (setq ag-highlight-search t)
+
+;(require 'helm-config)
+;(helm-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MODE STUFF
