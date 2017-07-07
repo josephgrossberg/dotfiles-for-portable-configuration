@@ -74,19 +74,12 @@
 (powerline-default)
 
 (require 'package) ;; You might already have this line
-(add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/") t)
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")
+                         ("melpa-stable" . "https://stable.melpa.org/packages/")
+))
 (package-initialize)
-;; others needed? smex, git-gutter, ag
-;; via M-x package-install RET ag RET
-;; (add-to-list 'package-archives
-;;              '("marmalade" . "http://marmalade-repo.org/packages/") t)
-;; (add-to-list 'package-archives
-;;              '("technomancy" . "http://repo.technomancy.us/emacs/") t)
-;; (add-to-list 'package-archives
-;;              '("elpa" . "http://tromey.com/elpa/") t)
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 ;; to start emacs web server:
 ;(require 'simple-httpd)
@@ -108,8 +101,8 @@
 (require 'ag)
 (setq ag-highlight-search t)
 
-;(require 'helm-config)
-;(helm-mode 1)
+(require 'helm-config)
+(helm-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MODE STUFF
@@ -223,6 +216,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 (setq confirm-nonexistent-file-or-buffer nil)
 (setq completion-ignore-case t)
+(setq vc-follow-symlinks t)
 
 ;; methods I forget the name of
 ; find-grep-dired
