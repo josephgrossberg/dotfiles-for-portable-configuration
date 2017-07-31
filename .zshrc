@@ -59,6 +59,14 @@ if (which rbenv > /dev/null); then
 fi
 
 ###################################
+# NVM
+###################################
+if (which nvm > /dev/null); then
+    export NVM_DIR="$HOME/.nvm"
+    . "/usr/local/opt/nvm/nvm.sh"
+fi
+
+###################################
 # HISTORY
 ###################################
 export HISTFILE=~/.zsh_history
