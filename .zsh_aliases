@@ -71,7 +71,6 @@ function pbcat() {
 function tgz() {
     tar -pcz ${1} > ${1}.tgz
 }
-alias hm="cd ~/workspace/atas-platform"
 
 # Found here: https://github.com/sapegin/dotfiles/blob/master/zsh/aliases.zsh
 cdf() { cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"; }
@@ -79,8 +78,6 @@ alias get="curl -O -L"
 alias gist-paste="gist --private --copy --paste --filename"  # gist-paste filename.ext -- create private Gist from the clipboard contents
 alias gist-file="gist --private --copy"  # gist-file filename.ext -- create private Gist from a file
 
-# Load Engineering
-export ENGINEERING="$HOME/workspace/engineering"
-export PATH="$PATH:$ENGINEERING/bin"
-source $ENGINEERING/bin/source_eng.sh
-source-eng
+if [[ -a ~/.zsh_work_aliases ]]; then
+    source ~/.zsh_work_aliases
+fi
