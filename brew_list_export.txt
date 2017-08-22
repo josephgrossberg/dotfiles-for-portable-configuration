@@ -1,5 +1,6 @@
 autoconf
 bash-completion
+coreutils
 emacs
 exa
 fontconfig
@@ -9,6 +10,7 @@ gdbm
 gdrive
 gist
 git
+git-radar
 graphviz
 htop
 icu4c

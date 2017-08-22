@@ -23,6 +23,7 @@ prompt_mail_count() {
 # todo: invert colors for first part and second part
 PROMPT='${%$reset_color%}%{$PROMPT_PROMPT%}${%$reset_color%}[%D{%I:%M:%S}] %{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}
 %{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}%{$PROMPT_PROMPT%}»%{$reset_color%} '
+export PROMPT="$PROMPT\$(git-radar --zsh --fetch) "
 
 #RPS1="${return_code}"
 
