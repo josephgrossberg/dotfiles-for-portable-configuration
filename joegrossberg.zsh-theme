@@ -5,13 +5,7 @@ setopt promptsubst
 
 autoload -U add-zsh-hook
 
-PROMPT_SUCCESS_COLOR=$FG[000]$BG[059]
-PROMPT_FAILURE_COLOR=$FG[124]
-PROMPT_VCS_INFO_COLOR=$FG[242]
-PROMPT_PROMPT=$FG[059]
-GIT_DIRTY_COLOR=$FG[161] # red chinese
-GIT_CLEAN_COLOR=$FG[244] # grey check
-GIT_PROMPT_INFO=$FG[012]
+DIRECTORY_INVERSE_COLOR=$FG[000]$BG[059]
 
 prompt_mail_count() {
   MAIL_COUNT_PATH="~/bin/mail_count.scpt"
@@ -20,24 +14,7 @@ prompt_mail_count() {
   fi
 }
 
-# todo: invert colors for first part and second part
-PROMPT='%{$PROMPT_PROMPT%}${%$reset_color%}[%D{%I:%M:%S}] %{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}
-»%{$GIT_PROMPT_INFO%}%{$GIT_DIRTY_COLOR%}$(git_prompt_status)%{$reset_color%}'
-
-export PROMPT="$PROMPT \$(git-radar --zsh --fetch) "
-
-#RPS1="${return_code}"
-
-ZSH_THEME_GIT_PROMPT_PREFIX=" ⌥  "
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$GIT_PROMPT_INFO%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" %{$GIT_DIRTY_COLOR%}揦鮓"
-ZSH_THEME_GIT_PROMPT_CLEAN=" %{$GIT_CLEAN_COLOR%}✔"
-
-#ZSH_THEME_MAIL_PROMPT_UNREAD="%{$FG[162]%}%{$(prompt_mail_count)%}${%$reset_color%}"
-
-ZSH_THEME_GIT_PROMPT_ADDED="%{$FG[154]%}✚%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_MODIFIED="%{$FG[166]%}Δ%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DELETED="%{$FG[160]%}✖%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_RENAMED="%{$FG[220]%} ➜ %{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNMERGED="%{$FG[082]%}═%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$FG[190]%}✭%{$reset_color%}"
+CURRENT_DIR_PROMPT="[%D{%I:%M:%S}] %{$DIRECTORY_INVERSE_COLOR%}%~%{$reset_color%}"
+PROMPT='$CURRENT_DIR_PROMPT'
+export PROMPT="$CURRENT_DIR_PROMPT\$(git-radar --zsh --fetch)
+» "
