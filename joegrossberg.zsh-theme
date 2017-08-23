@@ -14,6 +14,7 @@ prompt_mail_count() {
   fi
 }
 
+export GIT_RADAR_COLOR_BRANCH="$fg_bold[black]"
 CURRENT_DIR_PROMPT="[%D{%I:%M:%S}] %{$DIRECTORY_INVERSE_COLOR%}%~%{$reset_color%}"
 PROMPT='$CURRENT_DIR_PROMPT'
 export PROMPT="$CURRENT_DIR_PROMPT\$(git-radar --zsh --fetch)
