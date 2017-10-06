@@ -11,7 +11,7 @@
     ("dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default)))
  '(package-selected-packages
    (quote
-    (melpa-upstream-visit smex powerline git-gutter ag))))
+    (rjsx-mode melpa-upstream-visit smex powerline git-gutter ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -141,8 +141,12 @@
 (add-to-list 'auto-mode-alist '("\\.har$" . js2-mode))
 (autoload 'coffee-mode "coffee-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
-(autoload 'jsx-mode "jsx-mode" "JSX mode" t)
+;(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
+;(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . jsx-mode))
+;(autoload 'jsx-mode "jsx-mode" "JSX mode" t)
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
+(autoload 'rjsx-mode "rjsx-mode" "RJSX mode" t)
 
 ;; elixir
 (require 'elixir-mode)
