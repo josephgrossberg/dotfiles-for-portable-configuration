@@ -3,6 +3,7 @@ bash-completion
 coreutils
 emacs
 exa
+fd
 fontconfig
 freetype
 gd
@@ -19,6 +20,7 @@ jpeg
 libpng
 libtiff
 libtool
+m-cli
 nvm
 openssl
 pcre
@@ -32,6 +34,8 @@ ruby-build
 shellcheck
 sqlite
 the_silver_searcher
+tree
+wdiff
 webp
 wget
 xz
