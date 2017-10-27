@@ -21,6 +21,7 @@ libpng
 libtiff
 libtool
 m-cli
+nginx
 nvm
 openssl
 pcre
@@ -30,6 +31,7 @@ python
 rbenv
 readline
 redis
+ripgrep
 ruby-build
 shellcheck
 sqlite
