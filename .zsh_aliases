@@ -69,6 +69,10 @@ function pbcat() {
     cat ${1} | pbcopy
 }
 
+function reset_colors() {
+  echo -ne "\033[0m";
+}
+
 function tgz() {
     tar -pcz ${1} > ${1}.tgz
 }
