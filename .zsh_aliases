@@ -77,6 +77,10 @@ function tgz() {
     tar -pcz ${1} > ${1}.tgz
 }
 
+function lb() {
+    emacs ~/dotfiles-for-portable-configuration/logbook/$(date '+%Y-%m-%d').md
+}
+
 # Found here: https://github.com/sapegin/dotfiles/blob/master/zsh/aliases.zsh
 cdf() { cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"; }
 alias get="curl -O -L"
