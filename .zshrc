@@ -144,3 +144,5 @@ bindkey '^Z' foreground-emacs
 # all apps using internet connection: lsof -P -i -n | cut -f 1 -d " " | uniq
 # diff <(git ls-files) <(find . -type f)
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
