@@ -6,6 +6,7 @@ exa
 fd
 fontconfig
 freetype
+fzf
 gd
 gdbm
 gdrive
