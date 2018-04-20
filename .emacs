@@ -11,7 +11,7 @@
     ("dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default)))
  '(package-selected-packages
    (quote
-    (fzf web-mode rjsx-mode melpa-upstream-visit smex powerline git-gutter ag))))
+    (fiplr web-mode rjsx-mode melpa-upstream-visit smex powerline git-gutter ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -100,6 +100,9 @@
 
 (require 'ag)
 (setq ag-highlight-search t)
+
+; fuzzy-finder
+(require 'fiplr)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MODE STUFF
