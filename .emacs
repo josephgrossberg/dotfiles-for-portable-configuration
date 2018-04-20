@@ -103,6 +103,7 @@
 
 ; fuzzy-finder
 (require 'fiplr)
+(global-set-key (kbd "C-x f") 'fiplr-find-file)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MODE STUFF
