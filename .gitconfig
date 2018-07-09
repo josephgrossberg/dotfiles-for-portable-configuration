@@ -33,7 +33,6 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   praise = blame
   st = status
-  login = !sh /Users/joegrossberg/workspace/atas/login.sh
 [apply]
   whitespace = nowarn
 [diff]
@@ -43,25 +42,11 @@
 [pull]
   rebase = true
 [github]
-	site = https://github.com
-	endpoint = https://api.github.com
+  site = https://github.com
+  endpoint = https://api.github.com
   oauth-token = SECRET
-	username = josephgrossberg
-[reflow]
-	git-server = GitHub
-[gitflow "branch"]
-	validation = validation
-	develop = master
-	master = master
-[gitflow "prefix"]
-	feature = feature
-	hotfix = hotfix
-	release = release
-[pivotal]
-	name = Joe Grossberg
-	email = josephgrossberg+github@gmail.com
-	initials = JG
+  username = josephgrossberg
 [user]
-	name = Joe Grossberg
-	email = josephgrossberg+github@gmail.com
-	initials = JG
+  name = Joe Grossberg
+  email = josephgrossberg@gmail.com
+  initials = JG
