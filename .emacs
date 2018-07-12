@@ -93,8 +93,7 @@
 
 (require 'git-gutter)
 (global-git-gutter-mode t)
-(git-gutter:linum-setup)
-(global-linum-mode t)
+(global-display-line-numbers-mode t)
 
 ;(require 'magit)
 
@@ -147,17 +146,6 @@
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js-jsx-mode))
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . js-jsx-mode))
 (autoload 'jsx-jsx-mode "js-jsx-mode" "JSX mode" t)
-;(add-to-list 'auto-mode-alist '("\\.jsx\\'" . rjsx-mode))
-;(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
-;(autoload 'rjsx-mode "rjsx-mode" "RJSX mode" t)
-
-;; jsp
-(autoload 'web-mode "web-mode" t)
-(setq auto-mode-alist (cons '("\\.jsp$" . web-mode) auto-mode-alist))
-
-;; elixir
-(require 'elixir-mode)
-(add-to-list 'auto-mode-alist '("\\.elixir2\\'" . elixir-mode))
 
 ;; other modes
 (autoload 'yaml-mode "yaml-mode" t)
