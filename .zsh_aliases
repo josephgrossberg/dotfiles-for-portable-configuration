@@ -1,5 +1,6 @@
 alias a='ack'
-alias ag='rg'
+# alias ag='ag --path-to-ignore ~/.ignore'
+alias ag='rg --ignore-file ~/.ignore'
 alias battery='pmset -g batt'
 alias bc='bc -l'
 alias be='bundle exec'
