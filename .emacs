@@ -30,6 +30,14 @@
 (setq blink-matching-paren nil)
 (menu-bar-mode -1)
 
+; hideshow
+(hs-minor-mode)
+;; C-c @ C-M-s show all
+;; C-c @ C-M-h hide all
+;; C-c @ C-s show block
+;; C-c @ C-h hide block
+;; C-c @ C-c toggle hide/show
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; DEFAULT ENCODING
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
