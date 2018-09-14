@@ -87,26 +87,6 @@
 (global-git-gutter-mode t)
 (global-display-line-numbers-mode t)
 
-;; make whitespace-mode use just basic coloring
-(require 'whitespace)
-(setq whitespace-style (quote (face trailing spaces newline space-mark newline-mark )))
-(setq whitespace-display-mappings
-  ;; all numbers are Unicode codepoint in decimal. ⁖ (insert-char 182 1)
-  '(
-    (space-mark 32 [183] [46]) ; 32 SPACE 「 」, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
-    (newline-mark 10 [9166 10]) ; 10 DOLLAR-SIGN, 9166 RETURN SYMBOL 「⏎」
-    (tab-mark 9 [9655 9] [92 9]) ; 9 TAB, 9655 WHITE RIGHT-POINTING TRIANGLE 「▷」
-    ))
-(global-whitespace-mode t)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(whitespace-space ((t (:background "black" :foreground "gray20"))))
- '(whitespace-tab ((t (:background "black" :foreground "gray20"))))
- '(whitespace-newline ((t (:background "black" :foreground "gray20")))))
-
 ;(require 'magit)
 
 (require 'ag)
