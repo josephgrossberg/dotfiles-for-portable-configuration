@@ -30,8 +30,9 @@
 (setq blink-matching-paren nil)
 (menu-bar-mode -1)
 
-; hideshow
-(hs-minor-mode)
+;; hideshow
+;;(hs-minor-mode)
+;(add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
 ;; C-c @ C-M-s show all
 ;; C-c @ C-M-h hide all
 ;; C-c @ C-s show block
@@ -150,6 +151,7 @@
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js-jsx-mode))
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . js-jsx-mode))
 (autoload 'jsx-jsx-mode "js-jsx-mode" "JSX mode" t)
+(add-hook 'js2-mode-hook 'hs-minor-mode)
 
 ;; other modes
 (autoload 'yaml-mode "yaml-mode" t)
