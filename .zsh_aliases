@@ -82,6 +82,12 @@ function lb() {
     emacs ~/dotfiles-for-portable-configuration/logbook/$(date '+%Y-%m-%d').md
 }
 
+function lint_and_test() {
+    eslint_d --cache . ;
+    eslint_d --quiet --cache --fix --debug . > /dev/null ;
+    npm run test:no-migrations
+}
+
 # Found here: https://github.com/sapegin/dotfiles/blob/master/zsh/aliases.zsh
 cdf() { cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"; }
 alias get="curl -O -L"
