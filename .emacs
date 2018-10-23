@@ -221,9 +221,9 @@
 (setq vc-follow-symlinks t)
 
 ;; methods I forget the name of
-; find-grep-dired
+; dired
 ; find-name-dired
-; grep-find
+; rgrep
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; STARTUP MESSAGE
