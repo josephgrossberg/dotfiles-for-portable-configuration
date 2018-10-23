@@ -10,7 +10,7 @@
     ("dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default)))
  '(package-selected-packages
    (quote
-    (jsx-mode fiplr web-mode melpa-upstream-visit smex powerline git-gutter ag))))
+    (jsx-mode web-mode melpa-upstream-visit smex powerline git-gutter ag))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; PATHS
@@ -102,8 +102,8 @@
 (setq ag-highlight-search t)
 
 ; fuzzy-finder
-(require 'fiplr)
-(global-set-key (kbd "C-x f") 'fiplr-find-file)
+; (require 'fiplr)
+; (global-set-key (kbd "C-x f") 'fiplr-find-file)
 
 ; rainbow brackets
 (require 'rainbow-delimiters)
