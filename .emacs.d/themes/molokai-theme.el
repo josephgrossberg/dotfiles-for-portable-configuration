@@ -62,7 +62,7 @@
 
        '(fringe ((t (:background "#232526"))))
      ;  '(Highlight ((t (:foreground "#000000" :background "#C4BE89"))))
-       '(hl-line ((t (:background "#293739" ))))
+       '(hl-line ((t (:background "#222222" ))))
        '(icompletep-choices ((t (:foreground "#F92672"))))
        '(icompletep-determined ((t (:foreground "#A6E22E"))))
        '(icompletep-keys ((t (:foreground "#F92672"))))
