@@ -10,7 +10,10 @@ function short_dir() {
     pwd | sed -e "s,^$HOME,~," | sed 's/\([^/]\)[^/]*\//\1\//g';
 }
 
-export PROMPT='$(short_dir)%{$fg_bold[black]%}$(git-radar --zsh --fetch)
+function git_prompt() {
+    # FIXME: parse this, and shorten the branch name, so we can have a single-line prompt
+    git-radar --zsh --fetch;
+}
+
+export PROMPT='$(short_dir)%{$fg_bold[black]%}$(git_prompt)
 %{$fg_bold[black]%}» %{$reset_color%}';
-
-
