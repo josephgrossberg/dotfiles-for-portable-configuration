@@ -11,9 +11,9 @@ function short_dir() {
 }
 
 function git_prompt() {
-    # FIXME: parse this, and shorten the branch name, so we can have a single-line prompt
-    git-radar --zsh --fetch;
+    git-radar --zsh --fetch |
+        # output is "(", then first match, then "..." subbed for \2
+        sed 's/(\([^)]\{85,85\}\)\([^)]*\)/(\1.../';
 }
 
-export PROMPT='$(short_dir)%{$fg_bold[black]%}$(git_prompt)
-%{$fg_bold[black]%}» %{$reset_color%}';
+export PROMPT='$(short_dir)%{$fg_bold[black]%}$(git_prompt)%{$fg_bold[black]%}» %{$reset_color%}';
