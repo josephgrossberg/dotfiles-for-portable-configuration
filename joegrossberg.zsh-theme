@@ -13,7 +13,7 @@ function short_dir() {
 function git_prompt() {
     git-radar --zsh --fetch |
         # output is "(", then first match, then "..." subbed for \2
-        sed 's/(\([^)]\{15,85\}\)\([^)]*\)/(\1.../';
+        sed 's/(\([^)]\{15,127\}\)\([^)]*\)/(\1.../';
 }
 
 export PROMPT='$(short_dir)%{$fg_bold[black]%}$(git_prompt)%{$fg_bold[black]%}» %{$reset_color%}';
