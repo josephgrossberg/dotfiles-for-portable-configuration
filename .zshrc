@@ -1,28 +1,3 @@
-export ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh configuration.
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-export ZSH_THEME="joegrossberg"
-
-# Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-export COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gitfast zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
 source ~/.zprofile
 
 # Customize to your needs...
@@ -49,14 +24,6 @@ export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CH
 
 # z for jumping around directories
 . ~/bin/z.sh
-
-###################################
-# RBENV
-###################################
-export PATH=$HOME/.rbenv/bin:$PATH
-if (which rbenv > /dev/null); then
-    eval "$(rbenv init -)"
-fi
 
 ###################################
 # NVM
@@ -101,11 +68,6 @@ setopt NO_cdable_vars
 setopt interactivecomments
 
 ###################################
-# PROMPT
-###################################
-# Done via oh-my-zsh now
-
-###################################
 # ALIASES
 ###################################
 if [ -f ~/.zsh_aliases ]; then
@@ -143,10 +105,14 @@ bindkey '^Z' foreground-emacs
 # !:1 prev (first) argument
 # all apps using internet connection: lsof -P -i -n | cut -f 1 -d " " | uniq
 # diff <(git ls-files) <(find . -type f)
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-[[ -r "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+###################################
+# PROMPT
+###################################
+export POWERLEVEL9K_MODE="nerdfont-complete"
+[ -f ~/powerlevel9k.zsh-theme ] && source ~/powerlevel9k.zsh-theme
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs newline status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
