@@ -22,6 +22,10 @@ export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
 export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
 
+export ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh configuration.
+plugins=(git gitfast zsh-syntax-highlighting)
+source $ZSH/oh-my-zsh.sh
+
 # z for jumping around directories
 . ~/bin/z.sh
 
@@ -116,3 +120,10 @@ export POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs newline status)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+POWERLEVEL9K_VCS_SHORTEN_LENGTH=20
+POWERLEVEL9K_VCS_SHORTEN_MIN_LENGTH=20
+POWERLEVEL9K_VCS_SHORTEN_STRATEGY="truncate_from_right"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
