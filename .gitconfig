@@ -28,6 +28,7 @@
   ci = commit
   commend = commit --amend --no-edit
   co = checkout
+  credit = blame
   di = diff
   dw = diff --color-words
   difflog = log -p
