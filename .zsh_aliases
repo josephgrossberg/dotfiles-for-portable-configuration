@@ -18,6 +18,7 @@ alias glohead='git log --oneline --decorate -20'
 alias good_morning='hm && git co trr-web-consignor-dev && git pull -p && bundle install && rake db:migrate && rake db:test:prepare && git co db/schema.rb && git gc && git remote prune origin && git st'
 alias gpmm="git pull origin master && git merge master"
 alias guid='mysql -u root -e"select uuid();"'
+alias guncommit='git reset --soft HEAD^'
 alias ls='ls -bG'
 alias la='ls -abGh'
 alias ll='ls -labGh'
