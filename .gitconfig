@@ -25,6 +25,7 @@
   changed = green
   untracked = cyan
 [alias]
+  cane = commit --amend --no-edit
   ci = commit
   commend = commit --amend --no-edit
   co = checkout
@@ -32,6 +33,7 @@
   di = diff
   dw = diff --color-words
   difflog = log -p
+  last = log -1 HEAD
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   praise = blame
   st = status
