@@ -55,6 +55,9 @@ function psgrep() {
 compdef g=git
 
 # other git ones
+function fixup() { // non-interactive rebase of the previous two commits
+    git reset --soft HEAD~${1} && git commit --amend -C HEAD;
+};
 function gitbranch {
   git checkout -b "$1";
   git push -u origin "$1";
