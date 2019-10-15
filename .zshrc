@@ -23,7 +23,7 @@ export GREP_COLOR='1;33'
 export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
 
 export ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh configuration.
-plugins=(git gitfast zsh-syntax-highlighting)
+plugins=(git gitfast zsh-syntax-highlighting zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 # z for jumping around directories
