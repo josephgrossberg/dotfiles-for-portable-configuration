@@ -26,8 +26,8 @@
   untracked = cyan
 [alias]
   cane = commit --amend --no-edit
-  ci = commit
   commend = commit --amend --no-edit
+  ci = commit
   co = checkout
   credit = blame
   di = diff
