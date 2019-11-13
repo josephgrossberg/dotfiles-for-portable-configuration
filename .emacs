@@ -10,7 +10,7 @@
     ("403399e5b23965f79d770f9b47565f297a06898c0c30ebb5dc76cbe63db78dd3" "dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default)))
  '(package-selected-packages
    (quote
-    (jsx-mode web-mode melpa-upstream-visit smex powerline git-gutter ag))))
+    (typescript-mode jsx-mode web-mode melpa-upstream-visit smex powerline git-gutter ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -154,6 +154,8 @@
 (add-to-list 'auto-mode-alist '("\\.har$" . js2-mode))
 (autoload 'coffee-mode "coffee-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(autoload 'typescript-mode "typescript-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js-jsx-mode))
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . js-jsx-mode))
 (autoload 'jsx-jsx-mode "js-jsx-mode" "JSX mode" t)
@@ -240,9 +242,4 @@
 (message "My .emacs loaded in %s seconds"
          (/ (- (car (last (current-time))) *emacs-load-start*) 100000.0))
 (recentf-open-files)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
