@@ -10,7 +10,7 @@
     ("403399e5b23965f79d770f9b47565f297a06898c0c30ebb5dc76cbe63db78dd3" "dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default)))
  '(package-selected-packages
    (quote
-    (typescript-mode jsx-mode web-mode melpa-upstream-visit smex powerline git-gutter ag))))
+    (company tide typescript-mode jsx-mode web-mode melpa-upstream-visit smex powerline git-gutter ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -154,12 +154,31 @@
 (add-to-list 'auto-mode-alist '("\\.har$" . js2-mode))
 (autoload 'coffee-mode "coffee-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
-(autoload 'typescript-mode "typescript-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js-jsx-mode))
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . js-jsx-mode))
 (autoload 'jsx-jsx-mode "js-jsx-mode" "JSX mode" t)
 (add-hook 'js2-mode-hook 'hs-minor-mode)
+
+;; typescript
+(autoload 'typescript-mode "typescript-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
+(defun setup-tide-mode ()
+  (interactive)
+  (tide-setup)
+  (flycheck-mode +1)
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (eldoc-mode +1)
+  (tide-hl-identifier-mode +1)
+  ;; company is an optional dependency. You have to
+  ;; install it separately via package-install
+  ;; `M-x package-install [ret] company`
+  (company-mode +1))
+;; aligns annotation to the right hand side
+(setq company-tooltip-align-annotations t)
+;; formats the buffer before saving
+(add-hook 'before-save-hook 'tide-format-before-save)
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
+
 
 ;; other modes
 (autoload 'yaml-mode "yaml-mode" t)
