@@ -34,6 +34,9 @@
 (setq resize-minibuffer-frame t)
 (setq-default transient-mark-mode t)
 (setq blink-matching-paren nil)
+(show-paren-mode 1)
+(require 'uniquify)
+(setq uniquify-buffer-name-style 1)
 (menu-bar-mode -1)
 (global-hl-line-mode)
 
@@ -160,6 +163,7 @@
 (add-hook 'js2-mode-hook 'hs-minor-mode)
 
 ;; typescript
+(setq-default typescript-indent-level 2)
 (autoload 'typescript-mode "typescript-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
 (defun setup-tide-mode ()
