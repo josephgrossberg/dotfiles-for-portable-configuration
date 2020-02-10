@@ -1,5 +1,4 @@
 alias a='ack'
-# alias ag='ag --path-to-ignore ~/.ignore'
 alias ag='rg --ignore-file ~/.ignore'
 alias battery='pmset -g batt'
 alias bc='bc -l'
@@ -14,7 +13,6 @@ alias eamcs='emacs -nw'
 alias fn='fd'
 alias gdnom='git diff --name-only master'
 alias gdp='git diff HEAD~'
-alias gh='ghwd'
 alias glohead='git log --oneline --decorate -20'
 alias good_morning='hm && git co trr-web-consignor-dev && git pull -p && bundle install && rake db:migrate && rake db:test:prepare && git co db/schema.rb && git gc && git remote prune origin && git st'
 alias gpmm="git pull origin master && git merge master"
