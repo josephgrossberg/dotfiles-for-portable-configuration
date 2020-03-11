@@ -16,6 +16,7 @@ gdbm
 gettext
 gh
 git
+git-delta
 git-lfs
 git-radar
 glances
