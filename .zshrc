@@ -20,7 +20,7 @@ export PSQL_PAGER=cat
 export MANPATH=$MANPATH:/usr/X11R6/man
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
-export LESS='--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
+export LESS='-Xr --LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
 
 export ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh configuration.
 plugins=(git gitfast zsh-syntax-highlighting zsh-autosuggestions)
