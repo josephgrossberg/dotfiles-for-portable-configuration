@@ -39,6 +39,7 @@
   praise = blame
   st = status
   uncommit= reset --soft HEAD^
+  undo = reset HEAD~1 --mixed
 [apply]
   whitespace = nowarn
 [diff]
