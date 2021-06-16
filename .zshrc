@@ -17,6 +17,7 @@ export EDITOR=emacs
 export VISUAL=emacs
 export PAGER=cat
 export PSQL_PAGER=cat
+export LOGOPTS=debug:out
 export MANPATH=$MANPATH:/usr/X11R6/man
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;33'
