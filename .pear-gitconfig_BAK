@@ -1,0 +1,16 @@
+[github]
+  site = https://github.com
+  endpoint = https://api.github.com
+  oauth-token = SECRET
+  username = jgrossbergpear
+[user]
+  name = Joe Grossberg
+  email = removed@removed.removed
+  initials = JG
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[hub]
+	protocol = https
