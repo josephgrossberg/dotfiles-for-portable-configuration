@@ -66,5 +66,5 @@
 	required = true
 
 # conditional github - https://utf9k.net/blog/conditional-gitconfig/
-# [includeIf "gitdir:~/work/"]
-#  path = ~/.work.gitconfig
+[includeIf "gitdir:~/src/peartherapeutics"]
+  path = ~/.pear-gitconfig
