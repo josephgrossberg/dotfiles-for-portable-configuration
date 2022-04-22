@@ -38,6 +38,7 @@
 (require 'uniquify)
 (menu-bar-mode -1)
 (global-hl-line-mode)
+(setq byte-compile-warnings '(cl-functions))
 
 ;; hideshow
 ;;(hs-minor-mode)
