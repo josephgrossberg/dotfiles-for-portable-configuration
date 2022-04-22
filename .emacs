@@ -36,7 +36,6 @@
 (setq blink-matching-paren nil)
 (show-paren-mode 1)
 (require 'uniquify)
-(setq uniquify-buffer-name-style 1)
 (menu-bar-mode -1)
 (global-hl-line-mode)
 
