@@ -6,11 +6,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   (quote
-    ("403399e5b23965f79d770f9b47565f297a06898c0c30ebb5dc76cbe63db78dd3" "dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default)))
+   '("403399e5b23965f79d770f9b47565f297a06898c0c30ebb5dc76cbe63db78dd3" "dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default))
  '(package-selected-packages
-   (quote
-    (company tide typescript-mode jsx-mode web-mode melpa-upstream-visit smex powerline git-gutter ag))))
+   '(dimmer company tide typescript-mode jsx-mode web-mode melpa-upstream-visit smex powerline git-gutter ag)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -48,6 +46,11 @@
 ;; C-c @ C-s show block
 ;; C-c @ C-h hide block
 ;; C-c @ C-c toggle hide/show
+
+(require 'dimmer)
+(setq dimmer-fraction 0.20)
+(setq dimmer-adjustment-mode :background)
+(dimmer-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; DEFAULT ENCODING
