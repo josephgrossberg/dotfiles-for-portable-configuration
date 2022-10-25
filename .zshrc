@@ -11,8 +11,7 @@ promptinit # prompt customization
 ###################################
 # ENVIRONMENT VARS
 ###################################
-export PATH=~/bin:/usr/local/bin:/usr/local/sbin:$PATH
-
+export PATH=~/bin:$HOME/.git-radar:/usr/local/bin:/usr/local/sbin:$PATH
 export EDITOR=emacs
 export VISUAL=emacs
 export PAGER=cat
@@ -24,6 +23,8 @@ export GREP_COLOR='1;33'
 export LESS='-Xr --LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
 
 export ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh configuration.
+# ZSH_THEME="joegrossberg"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git gitfast zsh-syntax-highlighting zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
@@ -187,3 +188,4 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+source /Users/joegrossberg/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
