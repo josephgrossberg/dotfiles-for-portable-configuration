@@ -4,7 +4,6 @@
   filemode = true
   ignorecase = false
   logallrefupdates = true
-  pager = delta --dark
   repositoryformatversion = 0
 [color]
   branch = auto
