@@ -23,7 +23,7 @@ export GREP_COLOR='1;33'
 export LESS='-Xr --LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --RAW-CONTROL-CHARS'
 
 export ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh configuration.
-# ZSH_THEME="joegrossberg"
+#ZSH_THEME="joegrossberg"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git gitfast zsh-syntax-highlighting zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
