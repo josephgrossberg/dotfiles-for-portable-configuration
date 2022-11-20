@@ -189,3 +189,5 @@ elif type compctl &>/dev/null; then
 fi
 ###-end-npm-completion-###
 source /Users/joegrossberg/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(rbenv init - zsh)"
