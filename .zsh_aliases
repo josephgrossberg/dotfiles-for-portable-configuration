@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+# shellcheck shell=bash
 alias a='ack'
 alias ag='rg --ignore-file ~/.ignore'
 alias battery='pmset -g batt'
@@ -56,7 +58,7 @@ function psgrep() {
 compdef g=git
 
 # other git ones
-function fixup() { // non-interactive rebase of the previous two commits
+function fixup() { # non-interactive rebase of the previous two commits
     git reset --soft HEAD~${1} && git commit --amend -C HEAD;
 };
 function gitbranch {

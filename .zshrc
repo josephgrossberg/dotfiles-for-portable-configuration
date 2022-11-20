@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+# shellcheck shell=bash
 source ~/.zprofile
 
 # Customize to your needs...
