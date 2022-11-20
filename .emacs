@@ -8,7 +8,7 @@
  '(custom-safe-themes
    '("403399e5b23965f79d770f9b47565f297a06898c0c30ebb5dc76cbe63db78dd3" "dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default))
  '(package-selected-packages
-   '(dimmer company tide typescript-mode jsx-mode web-mode melpa-upstream-visit smex powerline git-gutter ag)))
+   '(hide-mode-line dimmer company tide typescript-mode jsx-mode web-mode melpa-upstream-visit smex powerline git-gutter ag)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -156,6 +156,8 @@
 (autoload 'js2-mode "js2-mode" nil t)
 (setq js2-cleanup-whitespace nil)
 (setq js2-highlight-level 3)
+(add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx$" . typescript-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.har$" . js2-mode))
