@@ -39,7 +39,8 @@
 (setq byte-compile-warnings '(cl-functions))
 
 ;; hideshow
-;;(hs-minor-mode)
+;; (hs-minor-mode)
+(add-hook 'prog-mode-hook #'hs-minor-mode)
 ;(add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
 ;; C-c @ C-M-s show all
 ;; C-c @ C-M-h hide all
