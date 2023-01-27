@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 # shellcheck shell=bash
 alias a='ack'
-alias ag='rg --ignore-file ~/.ignore'
+alias ag='rg -g "!yarn.lock"'
 alias battery='pmset -g batt'
 alias bc='bc -l'
 alias be='bundle exec'
