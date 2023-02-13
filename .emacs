@@ -6,7 +6,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("37c8c2817010e59734fe1f9302a7e6a2b5e8cc648cf6a6cc8b85f3bf17fececf" "cb6ed4854a5919606a2eba2b7518717d5018a4ab070cb453be3ce0572107d9ed" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "403399e5b23965f79d770f9b47565f297a06898c0c30ebb5dc76cbe63db78dd3" "dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default))
+   '("b99d82e42b1fafd25ee055ed42fefc565daccfe1a233e1d807e9add1e1a5308c" "37c8c2817010e59734fe1f9302a7e6a2b5e8cc648cf6a6cc8b85f3bf17fececf" "cb6ed4854a5919606a2eba2b7518717d5018a4ab070cb453be3ce0572107d9ed" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "403399e5b23965f79d770f9b47565f297a06898c0c30ebb5dc76cbe63db78dd3" "dcf0a263184b9329ac946ce0bf290e6d59b7b98eda890d350e00cd9c28015282" default))
  '(package-selected-packages
    '(hide-mode-line dimmer company tide typescript-mode jsx-mode web-mode melpa-upstream-visit smex powerline git-gutter ag)))
 (custom-set-faces
@@ -80,7 +80,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (if (boundp 'custom-theme-load-path)
     (add-to-list 'custom-theme-load-path "~/.emacs.d/themes"))
-(load-theme 'vs-dark)
+(load-theme 'monokai)
 
 (require 'powerline)
 (powerline-default)
@@ -95,7 +95,7 @@
 ))
 (package-initialize)
 
-(ido-mode nil) ; disables over-eager tab-completion, confusing copy-paste of paths
+;(ido-mode nil) ; disables over-eager tab-completion, confusing copy-paste of paths
 
 ;; to start emacs web server:
 ;(require 'simple-httpd)
