@@ -80,7 +80,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (if (boundp 'custom-theme-load-path)
     (add-to-list 'custom-theme-load-path "~/.emacs.d/themes"))
-(load-theme 'monokai)
+(load-theme 'molokai)
 
 (require 'powerline)
 (powerline-default)
