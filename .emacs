@@ -81,6 +81,10 @@
 (if (boundp 'custom-theme-load-path)
     (add-to-list 'custom-theme-load-path "~/.emacs.d/themes"))
 (load-theme 'molokai)
+(set-face-attribute 'font-lock-comment-face nil
+                    :foreground "#ccccff" :background "#000033")
+(set-face-attribute 'font-lock-comment-face nil
+                    :foreground "#ccccff" :background "#000033")
 
 (require 'powerline)
 (powerline-default)
