@@ -276,3 +276,7 @@
          (/ (- (car (last (current-time))) *emacs-load-start*) 100000.0))
 (recentf-open-files)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; COPILOT STUFF
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-file "~/dotfiles-for-portable-configuration/copilot-emacsd/init.el")
