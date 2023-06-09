@@ -279,4 +279,4 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; COPILOT STUFF
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-file "~/dotfiles-for-portable-configuration/copilot-emacsd/init.el")
+;(load-file "~/dotfiles-for-portable-configuration/copilot-emacsd/init.el")
