@@ -47,10 +47,10 @@
 ;; C-c @ C-h hide block
 ;; C-c @ C-c toggle hide/show
 
-;; (require 'dimmer)
-;; (setq dimmer-fraction 0.20)
-;; (setq dimmer-adjustment-mode :background)
-;; (dimmer-mode t)
+;; methods I forget the name of
+; dired
+; find-name-dired
+; rgrep
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; DEFAULT ENCODING
@@ -128,32 +128,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; MODE STUFF
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; erlang
-;; TODO: more elegant solution to symlinks / version-specific
-(setq load-path (cons  "~/erlang_install/lib/erlang/lib/tools-2.6.13/emacs"
-                       load-path))
-(setq erlang-root-dir "~/erlang_install/lib/erlang")
-(setq exec-path (cons "~/erlang_install/lib/erlang/bin" exec-path))
-(if (featurep 'erlang-start) (require 'erlang-start))
-;; see: http://bob.ippoli.to/archives/2007/03/14/erlang-mode-for-emacs/
-;(defvar inferior-erlang-prompt-timeout t)
-
-;; ruby
-;; (autoload 'ruby-mode "ruby-mode" t)
-;; (setq auto-mode-alist (cons '("\\.rb$" . ruby-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("Rakefile" . ruby-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("Capfile" . ruby-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("Gemfile" . ruby-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("\\.rake$" . ruby-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("\\.irbrc$" . ruby-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("\\.rhtml$" . web-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("\\.erb$" . web-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("\\.sass$" . css-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("\\.scss$" . css-mode) auto-mode-alist))
-;; (autoload 'haml-mode "haml-mode" t)
-;; (setq auto-mode-alist (cons '("\\.haml$" . haml-mode) auto-mode-alist))
-;; (setq auto-mode-alist (cons '("\\.feature$" . feature-mode) auto-mode-alist))
-
 ;; js
 ;(setq auto-mode-alist (cons '("\\.js$" . javascript-mode) auto-mode-alist))
 (autoload 'js2-mode "js2-mode" nil t)
@@ -163,9 +137,6 @@
 (add-to-list 'auto-mode-alist '("\\.tsx$" . typescript-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
-;(add-to-list 'auto-mode-alist '("\\.har$" . js2-mode))
-;(autoload 'coffee-mode "coffee-mode" nil t)
-;(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js-jsx-mode))
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . js-jsx-mode))
 (autoload 'jsx-jsx-mode "js-jsx-mode" "JSX mode" t)
@@ -259,11 +230,6 @@
 (setq confirm-nonexistent-file-or-buffer nil)
 (setq completion-ignore-case t)
 (setq vc-follow-symlinks t)
-
-;; methods I forget the name of
-; dired
-; find-name-dired
-; rgrep
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; STARTUP MESSAGE
