@@ -244,10 +244,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; AI STUFF
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;(load-file "~/dotfiles-for-portable-configuration/copilot-emacsd/init.el")
-
 (add-to-list 'package-archives '( "jcs-elpa" . "https://jcs-emacs.github.io/jcs-elpa/packages/") t)
-(setq openai-key "[YOUR API KEY]")
+(setq openai-key (getenv "OPENAI_KEY"))
 (use-package chatgpt :ensure t)
 (use-package codegpt :ensure t)
 (use-package copilot :ensure t)
