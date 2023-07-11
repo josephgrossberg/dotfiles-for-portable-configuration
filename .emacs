@@ -141,23 +141,25 @@
 ;; MODE STUFF
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; js
-;(setq auto-mode-alist (cons '("\\.js$" . javascript-mode) auto-mode-alist))
 (autoload 'js2-mode "js2-mode" nil t)
 (setq js2-cleanup-whitespace nil)
 (setq js2-highlight-level 3)
-(add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
-(add-to-list 'auto-mode-alist '("\\.tsx$" . typescript-mode))
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
+(add-hook 'js2-mode-hook 'hs-minor-mode)
+
+;; jsx
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js-jsx-mode))
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . js-jsx-mode))
 (autoload 'jsx-jsx-mode "js-jsx-mode" "JSX mode" t)
-(add-hook 'js2-mode-hook 'hs-minor-mode)
 
 ;; typescript
 (setq-default typescript-indent-level 2)
 (autoload 'typescript-mode "typescript-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.ts$" . typescript-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx$" . typescript-mode))
+(autoload 'tide "tide" t)
+(autoload 'company "company" t)
 (defun setup-tide-mode ()
   (interactive)
   (tide-setup)
@@ -174,6 +176,7 @@
 ;; formats the buffer before saving
 (add-hook 'before-save-hook 'tide-format-before-save)
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
+(add-hook 'typescript-ts-mode-hook #'setup-tide-mode)
 
 
 ;; other modes
