@@ -36,6 +36,25 @@
 (menu-bar-mode -1)
 (global-hl-line-mode)
 (setq byte-compile-warnings '(cl-functions))
+(add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt) ;; don't echo passwords
+(setq use-dialog-box nil)
+(global-auto-revert-mode t)
+
+;; usability
+(defalias 'yes-or-no-p 'y-or-n-p)
+(setq confirm-nonexistent-file-or-buffer nil)
+(setq completion-ignore-case t)
+(setq vc-follow-symlinks t)
+(setq history-length 1000)
+(savehist-mode 1)
+(save-place-mode 1)
+
+;; recentf stuff
+(autoload 'recentf "recentf" t)
+(recentf-mode 1)
+(setq recentf-max-saved-items 100)
+(setq recentf-max-menu-items 100)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 ;; hideshow
 ;; (hs-minor-mode)
@@ -96,13 +115,6 @@
                          ("melpa-stable" . "https://stable.melpa.org/packages/")
 ))
 (package-initialize)
-
-;(ido-mode nil) ; disables over-eager tab-completion, confusing copy-paste of paths
-
-;; to start emacs web server:
-;(require 'simple-httpd)
-;(setq httpd-root "/var/www")
-;(httpd-start)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
@@ -188,13 +200,6 @@
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
-;; recentf stuff
-(autoload 'recentf "recentf" t)
-(recentf-mode 1)
-(setq recentf-max-saved-items 50)
-(setq recentf-max-menu-items 50)
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
-
 ;; autorevert stuff
 (autoload 'auto-revert-mode "autorevert" nil t)
 (autoload 'turn-on-auto-revert-mode "autorevert" nil nil)
@@ -205,31 +210,8 @@
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
 
-;; counting functions
-(defalias 'lc 'count-lines-page)
-(defun wc ()
-  "Count the words in the current buffer, show the result in the minibuffer"
-  (interactive)          ; *** This is the line that you need to add
-  (save-excursion
-    (save-restriction
-      (widen)
-      (goto-char (point-min))
-      (let ((count 0))
-      (while (forward-word 1)
-    (setq count(1+ count)))
-      (message "There are %d words in the buffer" count)))))
-
 ;; for M-x occur
 (setq list-matching-lines-default-context-lines 1)
-
-;; don't echo passwords
-(add-hook 'comint-output-filter-functions 'comint-watch-for-password-prompt)
-
-;; usability
-(defalias 'yes-or-no-p 'y-or-n-p)
-(setq confirm-nonexistent-file-or-buffer nil)
-(setq completion-ignore-case t)
-(setq vc-follow-symlinks t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; STARTUP MESSAGE
