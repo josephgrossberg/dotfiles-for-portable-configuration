@@ -48,7 +48,7 @@ yet."
   "Memoize FUNC.
 If argument is a symbol then install the memoized function over
 the original function.  Use frame-local memoization."
-  (typecase func
+  (cl-typecase func
     (symbol (fset func (memoize-wrap-frame-local (symbol-function func))) func)
     (function (memoize-wrap-frame-local func))))
 
@@ -143,12 +143,12 @@ static char * %s[] = {
       (let ((len  (length data))
             (idx  0))
         (apply 'concat
-               (mapcar '(lambda (dl)
+               (mapcar #'(lambda (dl)
                           (setq idx (+ idx 1))
                           (concat
                            "\""
                            (concat
-                            (mapcar '(lambda (d)
+                            (mapcar #'(lambda (d)
                                        (if (eq d 0)
                                            (string-to-char " ")
                                          (string-to-char ".")))
