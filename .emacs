@@ -218,14 +218,15 @@
 (setq list-matching-lines-default-context-lines 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; STARTUP MESSAGE
+;; STARTUP
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq inhibit-startup-message t
       inhibit-startup-echo-area-message t)
-(setq initial-scratch-message "; hello, world\n")
 (message "My .emacs loaded in %s seconds"
          (/ (- (car (last (current-time))) *emacs-load-start*) 100000.0))
 (recentf-open-files)
+(split-window-vertically)
+(switch-to-buffer "*Messages*")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; AI STUFF
