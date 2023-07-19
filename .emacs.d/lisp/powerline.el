@@ -332,7 +332,7 @@ static char * %s[] = {
                'mouse-1 (lambda () (interactive)
                           (setq powerline-buffer-size-suffix
                                 (not powerline-buffer-size-suffix))
-                          (redraw-modeline)))))
+                          (force-mode-line-update)))))
 
 ;;;###autoload
 (defpowerline powerline-buffer-id
