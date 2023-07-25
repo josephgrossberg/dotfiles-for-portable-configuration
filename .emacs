@@ -59,17 +59,6 @@
 ;; hideshow
 ;; (hs-minor-mode)
 (add-hook 'prog-mode-hook #'hs-minor-mode)
-;(add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
-;; C-c @ C-M-s show all
-;; C-c @ C-M-h hide all
-;; C-c @ C-s show block
-;; C-c @ C-h hide block
-;; C-c @ C-c toggle hide/show
-
-;; methods I forget the name of
-; dired
-; find-name-dired
-; rgrep
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; DEFAULT ENCODING
@@ -87,8 +76,6 @@
 (setq suggest-key-bindings t)
 (global-set-key [delete] 'delete-char)
 (global-set-key [kp-delete] 'delete-char)
-;(global-set-key "\C-h" 'backward-delete-char)
-;(global-set-key "\C-x\ ?" 'help)
 (global-set-key "\C-c\ l" 'goto-line)
 (global-set-key "\C-x\ f" 'find-file-other-window)
 (global-set-key "\C-z" nil)

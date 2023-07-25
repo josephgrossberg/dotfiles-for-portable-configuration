@@ -127,11 +127,6 @@
 ; find-name-dired
 ; grep-find
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; GIT-SPECIFIC STUFF
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'git-commit)
-(git-commit-mode)
-
 (message "My .emacs loaded in %s seconds"
          (/ (- (car (last (current-time))) *emacs-load-start*) 100000.0))
+;;; git-init-file.el ends here
