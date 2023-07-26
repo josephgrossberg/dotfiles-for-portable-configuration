@@ -147,7 +147,9 @@
 (add-to-list 'auto-mode-alist '("\\.tsx$" . typescript-mode))
 (autoload 'tide "tide" t)
 (autoload 'company "company" t)
+
 (defun setup-tide-mode ()
+  "Configures tide-mode for TypeScript in Emacs."
   (interactive)
   (tide-setup)
   (flycheck-mode +1)
