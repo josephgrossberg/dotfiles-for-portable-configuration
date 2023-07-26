@@ -1,3 +1,7 @@
+;;; .emacs --- Summary
+;;; Commentary:
+;;; My Emacs configuration, from https://github.com/josephgrossberg/dotfiles-for-portable-configuration/
+;;; Code:
 (defvar *emacs-load-start* (car (last (current-time)))) ; for startup
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
