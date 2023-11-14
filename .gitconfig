@@ -1,10 +1,12 @@
 [core]
   bare = false
-  editor = emacs -q -l ~/git-init-file.el
+  editor = code -r -w
   filemode = true
   ignorecase = false
   logallrefupdates = true
   repositoryformatversion = 0
+[sequence]
+  editor = code -r -w
 [color]
   branch = auto
   diff = auto

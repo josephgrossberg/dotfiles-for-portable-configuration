@@ -21,8 +21,8 @@ promptinit # prompt customization
 # ENVIRONMENT VARS
 ###################################
 export PATH=~/bin:$HOME/.git-radar:/usr/local/bin:/usr/local/sbin:$PATH
-export EDITOR=emacs
-export VISUAL=emacs
+export EDITOR="code -n --wait"
+export VISUAL="$EDITOR"
 export PAGER=cat
 export PSQL_PAGER=cat
 export LOGOPTS=debug:out
