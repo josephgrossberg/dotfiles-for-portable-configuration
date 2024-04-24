@@ -5,6 +5,10 @@
   ignorecase = false
   logallrefupdates = true
   repositoryformatversion = 0
+[init]
+  defaultBranch = main
+[url "git@github.com:"]
+	insteadOf = "https://github.com/"
 [sequence]
   editor = code -r -w
 [color]
@@ -49,6 +53,7 @@
 [diff]
   colorMoved = default
 [push]
+  autoSetupRemote = true
   default = current
 [pull]
   rebase = true
